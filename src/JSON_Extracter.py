@@ -4,14 +4,14 @@ from pydantic import BaseModel, Field
 from typing import Optional, List
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-# Load the spaCy model
+# Load the spaCy medium model
 try:
-    nlp = spacy.load("en_core_web_sm")
+    nlp = spacy.load("en_core_web_md")
 except OSError:
-    print("Downloading spaCy model 'en_core_web_sm'...")
-    spacy.cli.download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
-
+    print("Downloading spaCy model 'en_core_web_md'...")
+    # Using spacy.cli.download directly
+    spacy.cli.download("en_core_web_md")
+    nlp = spacy.load("en_core_web_md")
 
 class EmailAnalysis(BaseModel):
     """
@@ -24,6 +24,19 @@ class EmailAnalysis(BaseModel):
     deadline: Optional[str] = None
     named_entities: List[str] = Field(default_factory=list) # New field for named entities
     dates: List[str] = Field(default_factory=list) # New field for dates
+
+def check_semantic_similarity(text: str, target_words: List[str], threshold: float = 0.7) -> bool:
+    """
+    Checks if the given text has semantic similarity with any of the target words.
+    Requires a spaCy model with word vectors (e.g., en_core_web_md or lg).
+    """
+    doc = nlp(text.lower())
+    for token in doc:
+        for target_word in target_words:
+            if token.has_vector and nlp.vocab[target_word].has_vector:
+                if token.similarity(nlp.vocab[target_word]) > threshold:
+                    return True
+    return False
 
 def analyze_email_sentiment(email_body: str) -> EmailAnalysis:
     """
@@ -40,10 +53,10 @@ def analyze_email_sentiment(email_body: str) -> EmailAnalysis:
     else:
         sentiment = "neutral"
 
-    # Urgency keyword detection
-    very_urgent_keywords = ["critical", "immediate", "asap", "urgent"] # Added urgent here as well
-    urgent_keywords = ["important", "deadline", "soon", "tomorrow"]
-    promo_keywords = ["newsletter", "promo", "discount", "offer"]
+    # Urgency keyword detection (now enhanced with semantic similarity)
+    very_urgent_terms = ["critical", "immediate", "asap", "urgent", "now", "crucial"]
+    urgent_terms = ["important", "deadline", "soon", "tomorrow", "end of day", "eod", "priority"]
+    promo_terms = ["newsletter", "promo", "discount", "offer", "sale", "free"]
 
     found_keywords = []
     urgency_level = "Regular"
@@ -54,22 +67,35 @@ def analyze_email_sentiment(email_body: str) -> EmailAnalysis:
     named_entities = [ent.text for ent in doc.ents]
     dates = [ent.text for ent in doc.ents if ent.label_ == "DATE"]
 
-    # Improve urgency detection using spaCy entities and original keywords
-    if any(re.search(r'\b' + word + r'\b', email_body, re.IGNORECASE) for word in very_urgent_keywords):
+    # Improve urgency detection using spaCy entities, original keywords, and semantic similarity
+    email_lower = email_body.lower()
+
+    if check_semantic_similarity(email_lower, very_urgent_terms) or \
+       any(re.search(r'\b' + word + r'\b', email_lower, re.IGNORECASE) for word in very_urgent_terms):
         urgency_level = "Very Urgent"
-        found_keywords.extend(very_urgent_keywords)
-    elif any(re.search(r'\b' + word + r'\b', email_body, re.IGNORECASE) for word in urgent_keywords) or any(date for date in dates):
+        found_keywords.extend(very_urgent_terms)
+    elif check_semantic_similarity(email_lower, urgent_terms) or \
+         any(re.search(r'\b' + word + r'\b', email_lower, re.IGNORECASE) for word in urgent_terms) or \
+         any(date for date in dates): # Any date mentioned increases urgency
         urgency_level = "Urgent"
-        found_keywords.extend(urgent_keywords)
-    elif any(re.search(r'\b' + word + r'\b', email_body, re.IGNORECASE) for word in promo_keywords):
+        found_keywords.extend(urgent_terms)
+    elif check_semantic_similarity(email_lower, promo_terms) or \
+         any(re.search(r'\b' + word + r'\b', email_lower, re.IGNORECASE) for word in promo_terms):
         urgency_level = "Newsletter/Promo"
-        found_keywords.extend(promo_keywords)
+        found_keywords.extend(promo_terms)
     
     # Basic deadline extraction - can be improved with spaCy date entities
-    deadline = next((date for date in dates if "deadline" in email_body.lower() or "by" in email_body.lower()), None)
+    # Prioritize spaCy extracted dates for deadline if present and relevant
+    deadline = next((d for d in dates if any(keyword in d.lower() for keyword in ["tomorrow", "friday", "monday", "week", "day", "eod"])), None)
+    
     if not deadline:
-        deadline_match = re.search(r'deadline (is|by) (.*?)(?:\n|$)', email_body, re.IGNORECASE)
-        deadline = deadline_match.group(2).strip() if deadline_match else None
+        deadline_match = re.search(r'(?:deadline|due|by)\s+(.*?)(?:\.|\n|$)', email_body, re.IGNORECASE)
+        if deadline_match:
+            deadline_phrase = deadline_match.group(1).strip()
+            # Try to parse the deadline phrase with spaCy for better accuracy
+            deadline_doc = nlp(deadline_phrase)
+            date_ents = [ent.text for ent in deadline_doc.ents if ent.label_ == "DATE"]
+            deadline = date_ents[0] if date_ents else deadline_phrase
     
     analysis = EmailAnalysis(
         sentiment=sentiment,
@@ -104,14 +130,30 @@ if __name__ == '__main__':
     Just a reminder about the meeting tomorrow morning.
     """
 
-    print("--- NLP Analysis Result for Email 1 ---")
+    test_email_4 = """
+    Important: Your account will be suspended very soon if no action is taken.
+    """
+
+    test_email_5 = """
+    Friendly reminder: Your invoice is due by the end of next week.
+    """
+
+    print("--- NLP Analysis Result for Email 1 (Very Urgent) ---")
     result = analyze_email_sentiment(test_email_1)
     print(result.json(indent=2))
 
-    print("\n--- NLP Analysis Result for Email 2 ---")
+    print("\n--- NLP Analysis Result for Email 2 (Newsletter/Promo) ---")
     result = analyze_email_sentiment(test_email_2)
     print(result.json(indent=2))
 
-    print("\n--- NLP Analysis Result for Email 3 ---")
+    print("\n--- NLP Analysis Result for Email 3 (Urgent - Tomorrow) ---")
     result = analyze_email_sentiment(test_email_3)
+    print(result.json(indent=2))
+
+    print("\n--- NLP Analysis Result for Email 4 (Very Urgent - Semantic) ---")
+    result = analyze_email_sentiment(test_email_4)
+    print(result.json(indent=2))
+
+    print("\n--- NLP Analysis Result for Email 5 (Urgent - EOD) ---")
+    result = analyze_email_sentiment(test_email_5)
     print(result.json(indent=2))
