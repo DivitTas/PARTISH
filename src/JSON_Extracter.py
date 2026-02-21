@@ -1,5 +1,7 @@
 import re
 import spacy
+import pickle
+import os
 from pydantic import BaseModel, Field
 from typing import Optional, List
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -13,6 +15,9 @@ except OSError:
     spacy.cli.download("en_core_web_md")
     nlp = spacy.load("en_core_web_md")
 
+_clf = None
+_vectorizer = None
+
 class EmailAnalysis(BaseModel):
     """
     Represents the sentiment analysis, keyword extraction, and NLP-based entity recognition from an email.
@@ -20,6 +25,7 @@ class EmailAnalysis(BaseModel):
     sentiment: str = "neutral"
     sentiment_score: float = 0.0
     urgency_level: str = "Regular"
+    ml_urgency_score: Optional[int] = None # Urgency score predicted by ML model
     keywords: List[str] = Field(default_factory=list)
     deadline: Optional[str] = None
     named_entities: List[str] = Field(default_factory=list) # New field for named entities
@@ -42,6 +48,20 @@ def analyze_email_sentiment(email_body: str) -> EmailAnalysis:
     """
     Analyzes the email body for sentiment, urgency keywords, deadlines, and named entities using spaCy.
     """
+    global _clf, _vectorizer
+
+    if _clf is None or _vectorizer is None:
+        MODEL_PATH = 'models/urgency_model.pkl'
+        VECTORIZER_PATH = 'models/vectorizer.pkl'
+        if os.path.exists(MODEL_PATH) and os.path.exists(VECTORIZER_PATH):
+            with open(MODEL_PATH, 'rb') as f:
+                _clf = pickle.load(f)
+            with open(VECTORIZER_PATH, 'rb') as f:
+                _vectorizer = pickle.load(f)
+        else:
+            print("Warning: ML models not found. Skipping ML-based urgency prediction.")
+            # We can still proceed with rule-based analysis
+            
     analyzer = SentimentIntensityAnalyzer()
     sentiment_scores = analyzer.polarity_scores(email_body)
 
@@ -97,10 +117,33 @@ def analyze_email_sentiment(email_body: str) -> EmailAnalysis:
             date_ents = [ent.text for ent in deadline_doc.ents if ent.label_ == "DATE"]
             deadline = date_ents[0] if date_ents else deadline_phrase
     
+    # ML-based Urgency Prediction
+    ml_urgency_score = None
+    if _clf and _vectorizer:
+        import numpy as np
+        # Text features
+        X_text = _vectorizer.transform([email_body]).toarray()
+        
+        # Heuristic features (must match trainer's order)
+        h_features = np.array([[
+            sentiment_scores['compound'],
+            1 if deadline else 0,
+            len(found_keywords),
+            len(named_entities)
+        ]])
+        
+        X = np.hstack([X_text, h_features])
+        ml_urgency_score = int(_clf.predict(X)[0])
+        
+        # Override or combine with heuristic urgency
+        ml_urgency_map = {0: "Regular", 1: "Urgent", 2: "Very Urgent"}
+        urgency_level = ml_urgency_map.get(ml_urgency_score, urgency_level)
+
     analysis = EmailAnalysis(
         sentiment=sentiment,
         sentiment_score=sentiment_scores['compound'],
         urgency_level=urgency_level,
+        ml_urgency_score=ml_urgency_score,
         keywords=found_keywords,
         deadline=deadline,
         named_entities=named_entities,
