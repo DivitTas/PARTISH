@@ -136,6 +136,8 @@ celerybeat.pid
 
 # Environments
 .env
+token.pickle
+__pycache__/
 .envrc
 .venv
 env/
