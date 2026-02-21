@@ -1,12 +1,24 @@
 import google.generativeai as genai
 import json
-from pydantic import ValidationError
+from pydantic import BaseModel, ValidationError
+from typing import Optional
 from dotenv import load_dotenv
 import os
+
+load_dotenv()
+
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
+class EmailAnalysis(BaseModel):
+    tone: Optional[str] = None
+    deadline_hours: Optional[int] = None
+    action_required: bool
+    sender_role: Optional[str] = None
+    summary: str
+    confidence: float
+
 model = genai.GenerativeModel(
-    model_name="gemini-1.5-pro",
+    model_name="gemini-flash-latest",
     generation_config={
         "response_mime_type": "application/json",
     }
@@ -26,7 +38,7 @@ def analyze_email(email_body: str):
 
 Analyze the email below and return JSON with fields:
 tone, deadline_hours, action_required,
-sender_role, priority_score, summary, confidence.
+sender_role, summary, confidence.
 
 Email:
 \"\"\"
@@ -34,9 +46,14 @@ Email:
 \"\"\"
 """
 
-    response = model.generate_content(prompt)
-
-    raw_json = response.text
-    parsed = json.loads(raw_json)
-
-    return EmailAnalysis(**parsed)
+    try:
+        response = model.generate_content(prompt)
+        raw_json = response.text
+        parsed = json.loads(raw_json)
+        return EmailAnalysis(**parsed)
+    except (json.JSONDecodeError, ValidationError) as e:
+        print(f"Error parsing model response: {e}")
+        return None
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return None
