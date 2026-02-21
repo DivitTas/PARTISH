@@ -208,8 +208,6 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# Machine Learning models
-models/
-
 #GEMINI CLI 
 GEMINI.md
+models/
