@@ -1,13 +1,13 @@
-import google.generativeai as genai
-import json
-from pydantic import BaseModel, ValidationError
+from google import genai
+from pydantic import BaseModel
 from typing import Optional
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+# Initialize the new Google GenAI client
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 class EmailAnalysis(BaseModel):
     tone: Optional[str] = None
@@ -16,13 +16,6 @@ class EmailAnalysis(BaseModel):
     sender_role: Optional[str] = None
     summary: str
     confidence: float
-
-model = genai.GenerativeModel(
-    model_name="gemini-flash-latest",
-    generation_config={
-        "response_mime_type": "application/json",
-    }
-)
 
 SYSTEM_PROMPT = """
 You are an email analysis engine.
@@ -47,13 +40,16 @@ Email:
 """
 
     try:
-        response = model.generate_content(prompt)
-        raw_json = response.text
-        parsed = json.loads(raw_json)
-        return EmailAnalysis(**parsed)
-    except (json.JSONDecodeError, ValidationError) as e:
-        print(f"Error parsing model response: {e}")
-        return None
+        # Use the new SDK's generate_content with response_schema for direct parsing
+        response = client.models.generate_content(
+            model="gemini-flash-latest",
+            contents=prompt,
+            config={
+                "response_mime_type": "application/json",
+                "response_schema": EmailAnalysis,
+            }
+        )
+        return response.parsed
     except Exception as e:
         print(f"An error occurred: {e}")
         return None
