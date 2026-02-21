@@ -2,3 +2,29 @@
 An AI helper that prioritizes mails on urgency, with notification support for extremely urgent mails, and integration with your favourite workflows like notion.
 It stands for Personal Assistant for Random Trivial Inbox Supplemental Helper.
 PS. This is also a homage to our good friend Partish. 
+
+## Project Structure
+- `src/gmail_access.py`: Handles Gmail API authentication and fetching.
+- `src/DecisionTree_Trainer.py`: Independent script to train the Decision Tree model for urgency classification. It saves the trained model and vectorizer to `models/`.
+- `src/JSON_Extracter.py`: Core logic for analyzing email content. Uses NLP (spaCy + Vader) and the trained Decision Tree model (loaded lazily) to predict urgency and extract metadata.
+- `dataset/`: Contains synthetic training data (`synthetic_emails_100.csv`).
+- `models/`: Directory where trained models (`urgency_model.pkl`, `vectorizer.pkl`) are saved (ignored by git).
+
+## Setup
+1. Create a virtual environment: `python -m venv venv`
+2. Activate it: `source venv/bin/activate`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Download spaCy model: `python -m spacy download en_core_web_md`
+
+## Usage
+1. **Train the Model:**
+   ```bash
+   python src/DecisionTree_Trainer.py
+   ```
+   This will generate `models/urgency_model.pkl` and `models/vectorizer.pkl`.
+
+2. **Run Analysis:**
+   You can test the extraction logic directly:
+   ```bash
+   python src/JSON_Extracter.py
+   ```
