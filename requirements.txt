@@ -1,0 +1,7 @@
+spacy==3.7.2
+pydantic==1.10.8
+vaderSentiment==3.3.2
+google-api-python-client==2.190.0
+google-auth-oauthlib==0.4.6
+google-auth-httplib2==0.3.0
+python-dotenv==1.2.1
