@@ -103,12 +103,12 @@ def extract_manual_features(body: str, subject: str) -> List[float]:
     return [sentiment_score, has_deadline, keyword_intensity, num_entities]
 
 def train_decision_tree():
-    csv_path = 'dataset/synthetic_emails_100.csv'
+    csv_path = 'dataset/synthetic_emails_500.csv'
     if not os.path.exists(csv_path):
         print(f"Error: {csv_path} not found.")
         return
 
-    print("Loading data...")
+    print(f"Loading data from {csv_path}...")
     df = pd.read_csv(csv_path)
     
     # --- 1. Label Generation ---

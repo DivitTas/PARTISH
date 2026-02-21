@@ -7,7 +7,8 @@ PS. This is also a homage to our good friend Partish.
 - `src/gmail_access.py`: Handles Gmail API authentication and fetching.
 - `src/DecisionTree_Trainer.py`: Independent script to train the Decision Tree model for urgency classification. It saves the trained model and vectorizer to `models/`.
 - `src/JSON_Extracter.py`: Core logic for analyzing email content. Uses NLP (spaCy + Vader) and the trained Decision Tree model (loaded lazily) to predict urgency and extract metadata.
-- `dataset/`: Contains synthetic training data (`synthetic_emails_100.csv`).
+- `src/data_generator.py`: Generates synthetic email data (`dataset/synthetic_emails_500.csv`) for model training.
+- `dataset/`: Contains synthetic training data (`synthetic_emails_100.csv` and `synthetic_emails_500.csv`).
 - `models/`: Directory where trained models (`urgency_model.pkl`, `vectorizer.pkl`) are saved (ignored by git).
 
 ## Setup

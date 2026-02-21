@@ -1,0 +1,501 @@
+id,date,sender_name,sender_email,subject,body,intent
+1,2026-02-17T05:08:30.686483,User_b6200007,user_0@example.com,Rescheduling our call,Something came up. Can we move our call to 3 PM?,scheduling
+2,2026-02-02T05:08:30.686483,User_29477aec,user_1@example.com,URGENT: Approval needed,"We need your approval on this ASAP to proceed. Best regards,",urgent_deadline
+3,2026-01-23T05:08:30.686483,User_f8443827,user_2@example.com,How would you rate your support?,"We'd love your feedback on your recent support interaction. Best regards,",support
+4,2026-02-09T05:08:30.686483,User_f4219b4d,user_3@example.com,Don't miss out!,Our biggest sale of the year is happening now. Visit our store.,marketing
+5,2026-02-17T05:08:30.686483,User_6740c561,user_4@example.com,Meeting Request: Project Sync,Can we find a time to sync on the project this week?,scheduling
+6,2026-02-13T05:08:30.686483,User_20f305d7,user_5@example.com,How would you rate your support?,"We'd love your feedback on your recent support interaction. Best regards,",support
+7,2026-02-18T05:08:30.686483,User_03146124,user_6@example.com,Shareholder Meeting,Notice of the annual shareholder meeting.,investor
+8,2026-02-11T05:08:30.686483,User_61e7e4d9,user_7@example.com,Billing Statement,"Your monthly billing statement is ready for review. Best regards,",invoice
+9,2026-02-01T05:08:30.686483,User_a4b2a50d,user_8@example.com,Meeting Request: Project Sync,"Can we find a time to sync on the project this week? Thanks,",scheduling
+10,2026-02-05T05:08:30.686483,User_ac4f0a8b,user_9@example.com,Ticket #1234 Updated,Your support ticket has been updated. Please check the portal.,support
+11,2026-02-12T05:08:30.686483,User_f4cf5f72,user_10@example.com,Calendar Invite: Team Standup,Inviting you to the daily standup meeting.,scheduling
+12,2026-02-06T05:08:30.686483,User_b57e4f54,user_11@example.com,Action required: Support request,We need more information to process your request. Please reply with logs.,support
+13,2026-02-06T05:08:30.686483,User_98c123cf,user_12@example.com,Investment Opportunity,"We are opening a new round of funding. Thanks,",investor
+14,2026-02-03T05:08:30.686483,User_743073f3,user_13@example.com,Follow up on application,Thanks for applying. We'd like to move to the next stage.,recruiter
+15,2026-02-02T05:08:30.686483,User_045bf940,user_14@example.com,Status update?,Could you provide a quick status update on the project?,followup
+16,2026-02-12T05:08:30.686483,User_e42b63f1,user_15@example.com,Happy Birthday!,Wishing you a fantastic birthday! Let's celebrate soon.,social
+17,2026-01-31T05:08:30.686483,User_fe447519,user_16@example.com,URGENT: Approval needed,We need your approval on this ASAP to proceed.,urgent_deadline
+18,2026-02-19T05:08:30.686483,User_246df4d4,user_17@example.com,How would you rate your support?,We'd love your feedback on your recent support interaction.,support
+19,2026-01-31T05:08:30.686483,User_3596873f,user_18@example.com,Overdue Invoice Notice,"Your account is past due. Please remit payment immediately to avoid service interruption. Thanks,",invoice
+20,2026-02-12T05:08:30.686483,User_24ed0724,user_19@example.com,Availability for a quick chat,Are you free for 10 mins to discuss the roadmap?,scheduling
+21,2026-02-03T05:08:30.686483,User_0840d996,user_20@example.com,This month's top reads,Curated articles for you. Enjoy the read!,newsletter
+22,2026-01-26T05:08:30.686483,User_042fa0c4,user_21@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+23,2026-02-11T05:08:30.686483,User_09b4873c,user_22@example.com,Ticket #1234 Updated,Your support ticket has been updated. Please check the portal.,support
+24,2026-01-29T05:08:30.686483,User_4462f0e1,user_23@example.com,Action Required by EOD,Please submit your report by end of day today. This is critical.,urgent_deadline
+25,2026-02-15T05:08:30.686483,User_4b9c1acf,user_24@example.com,URGENT: Approval needed,We need your approval on this ASAP to proceed.,urgent_deadline
+26,2026-02-06T05:08:30.686483,User_2bf4b513,user_25@example.com,Lunch tomorrow?,"Hey, want to grab lunch tomorrow at 12?",social
+27,2026-02-19T05:08:30.686483,User_caf2cf1d,user_26@example.com,How would you rate your support?,We'd love your feedback on your recent support interaction.,support
+28,2026-02-14T05:08:30.686483,User_5a5cc8ba,user_27@example.com,Billing Statement,Your monthly billing statement is ready for review.,invoice
+29,2026-02-01T05:08:30.686483,User_757ad8d7,user_28@example.com,Promotion: upgrade and save,Upgrade your plan before the end of the month to lock in discounted pricing.,marketing
+30,2026-02-13T05:08:30.686483,User_613faa21,user_29@example.com,Action required: Support request,We need more information to process your request. Please reply with logs.,support
+31,2026-02-10T05:08:30.686483,User_3e9f0f60,user_30@example.com,This month's top reads,"Curated articles for you. Enjoy the read! Best regards,",newsletter
+32,2026-01-25T05:08:30.686483,User_ababc020,user_31@example.com,Meeting Request: Project Sync,Can we find a time to sync on the project this week?,scheduling
+33,2026-02-01T05:08:30.686483,User_1a010fd3,user_32@example.com,Checking in,Wanted to see if you had a chance to review the document I sent.,followup
+34,2026-02-14T05:08:30.686483,User_20f61654,user_33@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+35,2026-02-19T05:08:30.686483,User_c08ebb23,user_34@example.com,Due Diligence Request,Please provide the requested documents for the due diligence process.,investor
+36,2026-02-22T05:08:30.686483,User_b203acc9,user_35@example.com,NDA for review,Please review and sign the attached NDA.,legal
+37,2026-01-24T05:08:30.686483,User_30070ede,user_36@example.com,Catch up?,It's been a while. Are you free for a coffee next week?,social
+38,2026-02-20T05:08:30.686483,User_2a423dd9,user_37@example.com,Overdue Invoice Notice,Your account is past due. Please remit payment immediately to avoid service interruption.,invoice
+39,2026-02-19T05:08:30.686483,User_5b7ac49a,user_38@example.com,URGENT: Approval needed,"We need your approval on this ASAP to proceed. Thanks,",urgent_deadline
+40,2026-02-06T05:08:30.686483,User_b642fa64,user_39@example.com,Special Offer: CloudPlatform just for you,"Hi, we have a limited time offer on CloudPlatform. Get 20% off if you buy now! Thanks,",marketing
+41,2026-02-03T05:08:30.686483,User_c972686d,user_40@example.com,Critical Bug in Production,"Site is down. Immediate attention required. Best regards,",urgent_deadline
+42,2026-01-28T05:08:30.686483,User_81073fac,user_41@example.com,Invoice #9999 is due,"Please find attached invoice #9999. Payment is due by EOD. Best regards,",invoice
+43,2026-02-03T05:08:30.686483,User_348c2751,user_42@example.com,Community highlights,"See what the community has been building this week. Thanks,",newsletter
+44,2026-01-28T05:08:30.686483,User_0bc0614a,user_43@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+45,2026-02-11T05:08:30.686483,User_6cc41da8,user_44@example.com,Payment Receipt,Thanks for your payment. Here is your receipt.,invoice
+46,2026-02-18T05:08:30.686483,User_7d3b4a72,user_45@example.com,Meeting notes,Attached are the notes from today's all-hands meeting.,informational
+47,2026-01-28T05:08:30.686483,User_f6be974d,user_46@example.com,Shareholder Meeting,Notice of the annual shareholder meeting.,investor
+48,2026-01-31T05:08:30.686483,User_dbc29d22,user_47@example.com,Meeting Request: Project Sync,"Can we find a time to sync on the project this week? Thanks,",scheduling
+49,2026-01-31T05:08:30.686483,User_c12f0ffe,user_48@example.com,Billing Statement,Your monthly billing statement is ready for review.,invoice
+50,2026-01-28T05:08:30.686483,User_7f7a429c,user_49@example.com,Community highlights,See what the community has been building this week.,newsletter
+51,2026-02-10T05:08:30.686483,User_2b2f52be,user_50@example.com,New Opportunity at TechCorp,"Hi, I saw your profile and think you'd be a great fit for our Senior Dev role.",recruiter
+52,2026-02-14T05:08:30.686483,User_a89385ca,user_51@example.com,Happy Birthday!,Wishing you a fantastic birthday! Let's celebrate soon.,social
+53,2026-02-14T05:08:30.686483,User_142c4e27,user_52@example.com,Your Daily Digest,"Quick summary of today's most important news. Thanks,",newsletter
+54,2026-01-24T05:08:30.686483,User_35aa81f9,user_53@example.com,Rescheduling our call,Something came up. Can we move our call to 3 PM?,scheduling
+55,2026-02-15T05:08:30.686483,User_661e001c,user_54@example.com,Release schedule,"The next deployment is scheduled for Tuesday night. Thanks,",informational
+56,2026-02-01T05:08:30.686483,User_62ff3992,user_55@example.com,Rescheduling our call,"Something came up. Can we move our call to 3 PM? Thanks,",scheduling
+57,2026-02-19T05:08:30.686483,User_30bd4b3e,user_56@example.com,Follow up on application,Thanks for applying. We'd like to move to the next stage.,recruiter
+58,2026-02-10T05:08:30.686483,User_3caeba64,user_57@example.com,This month's top reads,"Curated articles for you. Enjoy the read! Best regards,",newsletter
+59,2026-01-30T05:08:30.686483,User_93b8885f,user_58@example.com,Due Diligence Request,Please provide the requested documents for the due diligence process.,investor
+60,2026-02-17T05:08:30.686483,User_9a65d45d,user_59@example.com,Shareholder Meeting,"Notice of the annual shareholder meeting. Best regards,",investor
+61,2026-01-29T05:08:30.686483,User_2395bff8,user_60@example.com,Happy Birthday!,"Wishing you a fantastic birthday! Let's celebrate soon. Thanks,",social
+62,2026-01-24T05:08:30.686483,User_67290d5f,user_61@example.com,New Opportunity at TechCorp,"Hi, I saw your profile and think you'd be a great fit for our Senior Dev role.",recruiter
+63,2026-01-23T05:08:30.686483,User_d9287aba,user_62@example.com,Interview Availability,Are you free for a 30-minute phone screen next Tuesday?,recruiter
+64,2026-01-31T05:08:30.686483,User_3d5d8c4f,user_63@example.com,Follow up on application,Thanks for applying. We'd like to move to the next stage.,recruiter
+65,2026-02-06T05:08:30.686483,User_f5368e06,user_64@example.com,Overdue Invoice Notice,Your account is past due. Please remit payment immediately to avoid service interruption.,invoice
+66,2026-02-10T05:08:30.686483,User_816aa80a,user_65@example.com,Your Daily Digest,"Quick summary of today's most important news. Best regards,",newsletter
+67,2026-02-16T05:08:30.686483,User_d61d4296,user_66@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+68,2026-01-24T05:08:30.686483,User_7cf9f9bf,user_67@example.com,Community highlights,See what the community has been building this week.,newsletter
+69,2026-02-14T05:08:30.686483,User_78eef707,user_68@example.com,Policy update,We have updated our privacy policy. Please review the changes.,informational
+70,2026-01-30T05:08:30.686483,User_5e584cc0,user_69@example.com,Weekly Roundup,Here are the top stories from this week. 1. AI news 2. Tech trends...,newsletter
+71,2026-02-22T05:08:30.686483,User_3622c889,user_70@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+72,2026-02-14T05:08:30.686483,User_07c2cb15,user_71@example.com,Availability for a quick chat,"Are you free for 10 mins to discuss the roadmap? Best regards,",scheduling
+73,2026-01-23T05:08:30.686483,User_c2930a24,user_72@example.com,FYI: Office closed on Friday,Just a note that the office will be closed this Friday for the holiday.,informational
+74,2026-02-07T05:08:30.686483,User_c86a1653,user_73@example.com,Meeting notes,Attached are the notes from today's all-hands meeting.,informational
+75,2026-02-19T05:08:30.686483,User_36a80869,user_74@example.com,Legal Notice,"This is a formal notice regarding the contract termination. Best regards,",legal
+76,2026-02-04T05:08:30.686483,User_23b6cc0b,user_75@example.com,Hiring: Software Engineer,We are looking for talented engineers to join our team.,recruiter
+77,2026-02-14T05:08:30.686483,User_1d4b662f,user_76@example.com,This month's top reads,Curated articles for you. Enjoy the read!,newsletter
+78,2026-02-04T05:08:30.686483,User_12fbad7f,user_77@example.com,Lunch tomorrow?,"Hey, want to grab lunch tomorrow at 12?",social
+79,2026-02-02T05:08:30.686483,User_30ea9af4,user_78@example.com,Catch up?,It's been a while. Are you free for a coffee next week?,social
+80,2026-02-11T05:08:30.686483,User_1196ed2b,user_79@example.com,Legal Notice,"This is a formal notice regarding the contract termination. Thanks,",legal
+81,2026-01-28T05:08:30.686483,User_3d4d31be,user_80@example.com,Meeting Request: Project Sync,Can we find a time to sync on the project this week?,scheduling
+82,2026-02-19T05:08:30.686483,User_aed674a3,user_81@example.com,Overdue Invoice Notice,"Your account is past due. Please remit payment immediately to avoid service interruption. Thanks,",invoice
+83,2026-02-02T05:08:30.686483,User_e548c479,user_82@example.com,Availability for a quick chat,"Are you free for 10 mins to discuss the roadmap? Best regards,",scheduling
+84,2026-02-17T05:08:30.686483,User_a56b7423,user_83@example.com,Hiring: Software Engineer,"We are looking for talented engineers to join our team. Thanks,",recruiter
+85,2026-01-26T05:08:30.686483,User_c1fcb3d2,user_84@example.com,Release schedule,The next deployment is scheduled for Tuesday night.,informational
+86,2026-02-19T05:08:30.686483,User_57f893ef,user_85@example.com,Hiring: Software Engineer,"We are looking for talented engineers to join our team. Thanks,",recruiter
+87,2026-02-11T05:08:30.686483,User_3909ad75,user_86@example.com,NDA for review,Please review and sign the attached NDA.,legal
+88,2026-02-22T05:08:30.686483,User_8ec272e5,user_87@example.com,FYI: Office closed on Friday,"Just a note that the office will be closed this Friday for the holiday. Thanks,",informational
+89,2026-02-21T05:08:30.686483,User_976aee1f,user_88@example.com,Q3 Update for Investors,"Here is our quarterly update. Growth is strong. Thanks,",investor
+90,2026-02-14T05:08:30.686483,User_a5f85d7b,user_89@example.com,Calendar Invite: Team Standup,Inviting you to the daily standup meeting.,scheduling
+91,2026-01-28T05:08:30.686483,User_6be63fc8,user_90@example.com,This month's top reads,"Curated articles for you. Enjoy the read! Thanks,",newsletter
+92,2026-02-10T05:08:30.686483,User_b78ca94a,user_91@example.com,Policy update,We have updated our privacy policy. Please review the changes.,informational
+93,2026-02-15T05:08:30.686483,User_5c9d64ae,user_92@example.com,Release schedule,The next deployment is scheduled for Tuesday night.,informational
+94,2026-01-28T05:08:30.686483,User_97a04675,user_93@example.com,Legal Notice,This is a formal notice regarding the contract termination.,legal
+95,2026-02-05T05:08:30.686483,User_05050b07,user_94@example.com,Issue Resolved,We believe your issue is now resolved. Let us know if you need anything else.,support
+96,2026-01-24T05:08:30.686483,User_2ce67c62,user_95@example.com,Compliance Training,"You are required to complete the compliance training by Friday. Best regards,",legal
+97,2026-02-09T05:08:30.686483,User_fa18f715,user_96@example.com,NDA for review,Please review and sign the attached NDA.,legal
+98,2026-02-18T05:08:30.686483,User_56be3312,user_97@example.com,Due Diligence Request,"Please provide the requested documents for the due diligence process. Best regards,",investor
+99,2026-02-11T05:08:30.686483,User_7fc54570,user_98@example.com,Release schedule,The next deployment is scheduled for Tuesday night.,informational
+100,2026-02-06T05:08:30.686483,User_495688e6,user_99@example.com,Overdue Invoice Notice,Your account is past due. Please remit payment immediately to avoid service interruption.,invoice
+101,2026-02-03T05:08:30.686483,User_632594ad,user_100@example.com,Interview Availability,Are you free for a 30-minute phone screen next Tuesday?,recruiter
+102,2026-01-30T05:08:30.686483,User_5de12b66,user_101@example.com,New features announced,"Check out the new features in CloudPlatform. We think you'll love them. Thanks,",marketing
+103,2026-02-01T05:08:30.686483,User_e64534ce,user_102@example.com,Happy Birthday!,Wishing you a fantastic birthday! Let's celebrate soon.,social
+104,2026-02-01T05:08:30.686483,User_7bc669fc,user_103@example.com,Hiring: Software Engineer,"We are looking for talented engineers to join our team. Best regards,",recruiter
+105,2026-02-03T05:08:30.686483,User_0767758f,user_104@example.com,Policy update,We have updated our privacy policy. Please review the changes.,informational
+106,2026-01-25T05:08:30.686483,User_d0b40d1b,user_105@example.com,Special Offer: CloudPlatform just for you,"Hi, we have a limited time offer on CloudPlatform. Get 20% off if you buy now! Thanks,",marketing
+107,2026-01-26T05:08:30.686483,User_bd3affdc,user_106@example.com,Policy update,We have updated our privacy policy. Please review the changes.,informational
+108,2026-01-30T05:08:30.686483,User_d10beb33,user_107@example.com,FYI: Office closed on Friday,"Just a note that the office will be closed this Friday for the holiday. Thanks,",informational
+109,2026-02-04T05:08:30.686483,User_032174e4,user_108@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+110,2026-02-10T05:08:30.686483,User_66ed4ea4,user_109@example.com,Release schedule,The next deployment is scheduled for Tuesday night.,informational
+111,2026-01-24T05:08:30.686483,User_df898972,user_110@example.com,Catch up?,"It's been a while. Are you free for a coffee next week? Thanks,",social
+112,2026-02-06T05:08:30.686483,User_0170c1b3,user_111@example.com,Meeting Request: Project Sync,Can we find a time to sync on the project this week?,scheduling
+113,2026-02-04T05:08:30.686483,User_222b9e08,user_112@example.com,Calendar Invite: Team Standup,Inviting you to the daily standup meeting.,scheduling
+114,2026-02-10T05:08:30.686483,User_d803918a,user_113@example.com,Interview Availability,Are you free for a 30-minute phone screen next Tuesday?,recruiter
+115,2026-02-03T05:08:30.686483,User_2787012c,user_114@example.com,Don't miss out!,"Our biggest sale of the year is happening now. Visit our store. Best regards,",marketing
+116,2026-02-03T05:08:30.686483,User_1569ebd2,user_115@example.com,Shareholder Meeting,Notice of the annual shareholder meeting.,investor
+117,2026-02-20T05:08:30.686483,User_e146b697,user_116@example.com,Special Offer: SuperWidget just for you,"Hi, we have a limited time offer on SuperWidget. Get 20% off if you buy now!",marketing
+118,2026-02-06T05:08:30.686483,User_ef1a4c38,user_117@example.com,Release schedule,"The next deployment is scheduled for Tuesday night. Best regards,",informational
+119,2026-02-19T05:08:30.686483,User_1af69d19,user_118@example.com,Status update?,Could you provide a quick status update on the project?,followup
+120,2026-02-07T05:08:30.686483,User_7e7d897c,user_119@example.com,Availability for a quick chat,Are you free for 10 mins to discuss the roadmap?,scheduling
+121,2026-01-29T05:08:30.686483,User_8932ed08,user_120@example.com,Hiring: Software Engineer,We are looking for talented engineers to join our team.,recruiter
+122,2026-02-09T05:08:30.686483,User_a44c3753,user_121@example.com,Invoice #9999 is due,Please find attached invoice #9999. Payment is due by EOD.,invoice
+123,2026-01-28T05:08:30.686483,User_ee3ae7c0,user_122@example.com,Issue Resolved,We believe your issue is now resolved. Let us know if you need anything else.,support
+124,2026-01-23T05:08:30.686483,User_e767f550,user_123@example.com,Promotion: upgrade and save,Upgrade your plan before the end of the month to lock in discounted pricing.,marketing
+125,2026-02-19T05:08:30.686483,User_3fa500a0,user_124@example.com,Terms of Service Update,We are updating our ToS. Continued use implies consent.,legal
+126,2026-02-12T05:08:30.686483,User_f8ba47e5,user_125@example.com,New Opportunity at TechCorp,"Hi, I saw your profile and think you'd be a great fit for our Senior Dev role.",recruiter
+127,2026-01-23T05:08:30.686483,User_41e4babc,user_126@example.com,Meeting notes,Attached are the notes from today's all-hands meeting.,informational
+128,2026-02-22T05:08:30.686483,User_9e5bdc33,user_127@example.com,Critical Bug in Production,"Site is down. Immediate attention required. Best regards,",urgent_deadline
+129,2026-02-12T05:08:30.686483,User_87f08129,user_128@example.com,Special Offer: AnalyticsTool just for you,"Hi, we have a limited time offer on AnalyticsTool. Get 20% off if you buy now!",marketing
+130,2026-02-10T05:08:30.686483,User_74e02013,user_129@example.com,Catch up?,"It's been a while. Are you free for a coffee next week? Thanks,",social
+131,2026-02-07T05:08:30.686483,User_0c4cce5e,user_130@example.com,Special Offer: CloudPlatform just for you,"Hi, we have a limited time offer on CloudPlatform. Get 20% off if you buy now!",marketing
+132,2026-02-11T05:08:30.686483,User_b52b1d9c,user_131@example.com,Action Required by EOD,Please submit your report by end of day today. This is critical.,urgent_deadline
+133,2026-01-26T05:08:30.686483,User_3d03a120,user_132@example.com,Action Required by EOD,"Please submit your report by end of day today. This is critical. Best regards,",urgent_deadline
+134,2026-02-02T05:08:30.686483,User_38c1f5b4,user_133@example.com,Due Diligence Request,Please provide the requested documents for the due diligence process.,investor
+135,2026-02-17T05:08:30.686483,User_230f444e,user_134@example.com,Action Required by EOD,Please submit your report by end of day today. This is critical.,urgent_deadline
+136,2026-01-26T05:08:30.686483,User_d3bcb6f1,user_135@example.com,How would you rate your support?,"We'd love your feedback on your recent support interaction. Best regards,",support
+137,2026-02-03T05:08:30.686483,User_c06eb894,user_136@example.com,Payment Receipt,Thanks for your payment. Here is your receipt.,invoice
+138,2026-02-20T05:08:30.686483,User_1985aaa4,user_137@example.com,Ticket #1234 Updated,Your support ticket has been updated. Please check the portal.,support
+139,2026-02-01T05:08:30.686483,User_3fddde5b,user_138@example.com,Meeting notes,Attached are the notes from today's all-hands meeting.,informational
+140,2026-02-16T05:08:30.686483,User_62dd1e51,user_139@example.com,Rescheduling our call,"Something came up. Can we move our call to 3 PM? Thanks,",scheduling
+141,2026-02-06T05:08:30.686483,User_590b425d,user_140@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+142,2026-02-22T05:08:30.686483,User_4f24a2f6,user_141@example.com,This month's top reads,Curated articles for you. Enjoy the read!,newsletter
+143,2026-01-24T05:08:30.686483,User_2bca809b,user_142@example.com,How would you rate your support?,We'd love your feedback on your recent support interaction.,support
+144,2026-02-17T05:08:30.686483,User_21fbf50c,user_143@example.com,Catch up?,It's been a while. Are you free for a coffee next week?,social
+145,2026-02-21T05:08:30.686483,User_2f496784,user_144@example.com,Invoice #9999 is due,Please find attached invoice #9999. Payment is due by EOD.,invoice
+146,2026-01-27T05:08:30.686483,User_cf7b490f,user_145@example.com,Your Daily Digest,"Quick summary of today's most important news. Best regards,",newsletter
+147,2026-01-25T05:08:30.686483,User_06b71306,user_146@example.com,Critical Bug in Production,Site is down. Immediate attention required.,urgent_deadline
+148,2026-02-07T05:08:30.686483,User_cc689a1d,user_147@example.com,Investment Opportunity,We are opening a new round of funding.,investor
+149,2026-01-30T05:08:30.686483,User_38014bea,user_148@example.com,Final Notice,"This is your final notice to complete the task before the deadline. Thanks,",urgent_deadline
+150,2026-02-09T05:08:30.686483,User_db10d509,user_149@example.com,Availability for a quick chat,Are you free for 10 mins to discuss the roadmap?,scheduling
+151,2026-02-17T05:08:30.686483,User_c9a2c702,user_150@example.com,Meeting Request: Project Sync,"Can we find a time to sync on the project this week? Thanks,",scheduling
+152,2026-01-28T05:08:30.686483,User_2206bcc3,user_151@example.com,Terms of Service Update,"We are updating our ToS. Continued use implies consent. Best regards,",legal
+153,2026-02-04T05:08:30.686483,User_d1b3441c,user_152@example.com,Critical Bug in Production,Site is down. Immediate attention required.,urgent_deadline
+154,2026-02-02T05:08:30.686483,User_32e5aa6f,user_153@example.com,New features announced,Check out the new features in DevKit. We think you'll love them.,marketing
+155,2026-02-02T05:08:30.686483,User_e75d66f9,user_154@example.com,Due Diligence Request,"Please provide the requested documents for the due diligence process. Best regards,",investor
+156,2026-02-03T05:08:30.686483,User_0c4097e4,user_155@example.com,New features announced,Check out the new features in CloudPlatform. We think you'll love them.,marketing
+157,2026-02-10T05:08:30.686483,User_56f2f1b7,user_156@example.com,Happy Birthday!,Wishing you a fantastic birthday! Let's celebrate soon.,social
+158,2026-02-16T05:08:30.686483,User_2cab80ae,user_157@example.com,Lunch tomorrow?,"Hey, want to grab lunch tomorrow at 12?",social
+159,2026-02-06T05:08:30.686483,User_bbf16994,user_158@example.com,Gentle reminder,"Just a gentle reminder to send over the files when you can. Best regards,",followup
+160,2026-02-19T05:08:30.686483,User_c8e8be4f,user_159@example.com,How would you rate your support?,We'd love your feedback on your recent support interaction.,support
+161,2026-01-27T05:08:30.686483,User_b4cd9beb,user_160@example.com,Lunch tomorrow?,"Hey, want to grab lunch tomorrow at 12?",social
+162,2026-02-12T05:08:30.686483,User_d428e959,user_161@example.com,Legal Notice,This is a formal notice regarding the contract termination.,legal
+163,2026-02-16T05:08:30.686483,User_929bb80c,user_162@example.com,Availability for a quick chat,Are you free for 10 mins to discuss the roadmap?,scheduling
+164,2026-02-07T05:08:30.686483,User_05fe15a9,user_163@example.com,Payment Receipt,"Thanks for your payment. Here is your receipt. Thanks,",invoice
+165,2026-02-16T05:08:30.686483,User_eaac2848,user_164@example.com,Calendar Invite: Team Standup,"Inviting you to the daily standup meeting. Best regards,",scheduling
+166,2026-01-24T05:08:30.686483,User_188c6912,user_165@example.com,Happy Birthday!,Wishing you a fantastic birthday! Let's celebrate soon.,social
+167,2026-02-16T05:08:30.686483,User_35aabe10,user_166@example.com,Investment Opportunity,We are opening a new round of funding.,investor
+168,2026-02-22T05:08:30.686483,User_5b4d3835,user_167@example.com,NDA for review,"Please review and sign the attached NDA. Thanks,",legal
+169,2026-01-24T05:08:30.686483,User_725ea813,user_168@example.com,Critical Bug in Production,Site is down. Immediate attention required.,urgent_deadline
+170,2026-01-31T05:08:30.686483,User_0074bf72,user_169@example.com,Rescheduling our call,"Something came up. Can we move our call to 3 PM? Best regards,",scheduling
+171,2026-02-01T05:08:30.686483,User_a717d0b7,user_170@example.com,Shareholder Meeting,Notice of the annual shareholder meeting.,investor
+172,2026-02-22T05:08:30.686483,User_e82a343e,user_171@example.com,Invoice #9999 is due,Please find attached invoice #9999. Payment is due by EOD.,invoice
+173,2026-02-02T05:08:30.686483,User_393b5326,user_172@example.com,Legal Notice,This is a formal notice regarding the contract termination.,legal
+174,2026-02-19T05:08:30.686483,User_bd0b95f6,user_173@example.com,URGENT: Approval needed,We need your approval on this ASAP to proceed.,urgent_deadline
+175,2026-02-15T05:08:30.686483,User_72fc8afd,user_174@example.com,Meeting notes,"Attached are the notes from today's all-hands meeting. Best regards,",informational
+176,2026-02-04T05:08:30.686483,User_ac9f2916,user_175@example.com,Release schedule,The next deployment is scheduled for Tuesday night.,informational
+177,2026-02-11T05:08:30.686483,User_3d720d59,user_176@example.com,Investment Opportunity,We are opening a new round of funding.,investor
+178,2026-01-30T05:08:30.686483,User_21e2d7bb,user_177@example.com,Invoice #9999 is due,"Please find attached invoice #9999. Payment is due by EOD. Best regards,",invoice
+179,2026-01-27T05:08:30.686483,User_1695e95a,user_178@example.com,Happy Birthday!,Wishing you a fantastic birthday! Let's celebrate soon.,social
+180,2026-01-25T05:08:30.686483,User_ff8f3dd7,user_179@example.com,Rescheduling our call,Something came up. Can we move our call to 3 PM?,scheduling
+181,2026-01-31T05:08:30.686483,User_0ade3b92,user_180@example.com,Interview Availability,"Are you free for a 30-minute phone screen next Tuesday? Thanks,",recruiter
+182,2026-02-03T05:08:30.686483,User_ff8876e1,user_181@example.com,Lunch tomorrow?,"Hey, want to grab lunch tomorrow at 12?",social
+183,2026-02-08T05:08:30.686483,User_7318fb47,user_182@example.com,Critical Bug in Production,Site is down. Immediate attention required.,urgent_deadline
+184,2026-02-14T05:08:30.686483,User_5a43fcc9,user_183@example.com,Status update?,"Could you provide a quick status update on the project? Best regards,",followup
+185,2026-02-01T05:08:30.686483,User_4a85fc3d,user_184@example.com,Interview Availability,Are you free for a 30-minute phone screen next Tuesday?,recruiter
+186,2026-02-03T05:08:30.686483,User_38ebe328,user_185@example.com,How would you rate your support?,"We'd love your feedback on your recent support interaction. Best regards,",support
+187,2026-02-17T05:08:30.686483,User_ddcbb376,user_186@example.com,Investment Opportunity,We are opening a new round of funding.,investor
+188,2026-01-28T05:08:30.686483,User_29a858d5,user_187@example.com,Compliance Training,"You are required to complete the compliance training by Friday. Thanks,",legal
+189,2026-02-18T05:08:30.686483,User_ebe39ad4,user_188@example.com,Rescheduling our call,"Something came up. Can we move our call to 3 PM? Best regards,",scheduling
+190,2026-02-06T05:08:30.686483,User_eddb587d,user_189@example.com,Meeting Request: Project Sync,Can we find a time to sync on the project this week?,scheduling
+191,2026-02-11T05:08:30.686483,User_827f1d7e,user_190@example.com,Interview Availability,Are you free for a 30-minute phone screen next Tuesday?,recruiter
+192,2026-02-16T05:08:30.686483,User_2ca98c44,user_191@example.com,Community highlights,"See what the community has been building this week. Best regards,",newsletter
+193,2026-02-16T05:08:30.686483,User_9682ba57,user_192@example.com,Terms of Service Update,We are updating our ToS. Continued use implies consent.,legal
+194,2026-01-31T05:08:30.686483,User_9d7aa278,user_193@example.com,Checking in,Wanted to see if you had a chance to review the document I sent.,followup
+195,2026-02-01T05:08:30.686483,User_1ca55251,user_194@example.com,Catch up?,"It's been a while. Are you free for a coffee next week? Thanks,",social
+196,2026-01-29T05:08:30.686483,User_3a8a241f,user_195@example.com,New Opportunity at TechCorp,"Hi, I saw your profile and think you'd be a great fit for our Senior Dev role.",recruiter
+197,2026-02-15T05:08:30.686483,User_8a22714e,user_196@example.com,Event reminder,"Reminder: The team dinner is tonight at 7 PM. Thanks,",social
+198,2026-02-14T05:08:30.686483,User_717ba732,user_197@example.com,Compliance Training,You are required to complete the compliance training by Friday.,legal
+199,2026-02-21T05:08:30.686483,User_a273e6b9,user_198@example.com,Following up on my previous email,"Hi, just bubbling this up to the top of your inbox. Any thoughts? Thanks,",followup
+200,2026-02-04T05:08:30.686483,User_f595bad2,user_199@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+201,2026-01-27T05:08:30.686483,User_d8f56862,user_200@example.com,New Opportunity at TechCorp,"Hi, I saw your profile and think you'd be a great fit for our Senior Dev role. Thanks,",recruiter
+202,2026-02-19T05:08:30.686483,User_94f060bb,user_201@example.com,New Opportunity at TechCorp,"Hi, I saw your profile and think you'd be a great fit for our Senior Dev role. Best regards,",recruiter
+203,2026-02-22T05:08:30.686483,User_e81e9f56,user_202@example.com,Policy update,We have updated our privacy policy. Please review the changes.,informational
+204,2026-02-05T05:08:30.686483,User_a9ec57e7,user_203@example.com,Weekly Roundup,"Here are the top stories from this week. 1. AI news 2. Tech trends... Thanks,",newsletter
+205,2026-02-15T05:08:30.686483,User_96278351,user_204@example.com,Due Diligence Request,Please provide the requested documents for the due diligence process.,investor
+206,2026-02-21T05:08:30.686483,User_f86acbd3,user_205@example.com,Happy Birthday!,"Wishing you a fantastic birthday! Let's celebrate soon. Thanks,",social
+207,2026-02-05T05:08:30.686483,User_4fe0e68f,user_206@example.com,Status update?,Could you provide a quick status update on the project?,followup
+208,2026-02-08T05:08:30.686483,User_eeb998fa,user_207@example.com,FYI: Office closed on Friday,Just a note that the office will be closed this Friday for the holiday.,informational
+209,2026-02-10T05:08:30.686483,User_2f46d867,user_208@example.com,NDA for review,"Please review and sign the attached NDA. Thanks,",legal
+210,2026-02-10T05:08:30.686483,User_4a0a76e2,user_209@example.com,Meeting Request: Project Sync,Can we find a time to sync on the project this week?,scheduling
+211,2026-01-29T05:08:30.686483,User_0f9faaf5,user_210@example.com,Checking in,Wanted to see if you had a chance to review the document I sent.,followup
+212,2026-02-16T05:08:30.686483,User_1211ff1b,user_211@example.com,This month's top reads,"Curated articles for you. Enjoy the read! Thanks,",newsletter
+213,2026-02-13T05:08:30.686483,User_f6892033,user_212@example.com,Payment Receipt,"Thanks for your payment. Here is your receipt. Thanks,",invoice
+214,2026-02-01T05:08:30.686483,User_1c6510ea,user_213@example.com,Invoice #9999 is due,Please find attached invoice #9999. Payment is due by EOD.,invoice
+215,2026-02-02T05:08:30.686483,User_7e1b3e50,user_214@example.com,Ticket #1234 Updated,Your support ticket has been updated. Please check the portal.,support
+216,2026-02-09T05:08:30.686483,User_8bdf2c8c,user_215@example.com,Payment Receipt,Thanks for your payment. Here is your receipt.,invoice
+217,2026-01-30T05:08:30.686483,User_3f6e0bed,user_216@example.com,Happy Birthday!,"Wishing you a fantastic birthday! Let's celebrate soon. Best regards,",social
+218,2026-02-17T05:08:30.686483,User_0e3e0c47,user_217@example.com,Due Diligence Request,Please provide the requested documents for the due diligence process.,investor
+219,2026-02-01T05:08:30.686483,User_8f709201,user_218@example.com,Action Required by EOD,Please submit your report by end of day today. This is critical.,urgent_deadline
+220,2026-01-24T05:08:30.686483,User_9d0c3a8d,user_219@example.com,Payment Receipt,Thanks for your payment. Here is your receipt.,invoice
+221,2026-02-14T05:08:30.686483,User_e4cacde7,user_220@example.com,Overdue Invoice Notice,Your account is past due. Please remit payment immediately to avoid service interruption.,invoice
+222,2026-02-02T05:08:30.686483,User_1f6dbe81,user_221@example.com,Lunch tomorrow?,"Hey, want to grab lunch tomorrow at 12? Thanks,",social
+223,2026-02-08T05:08:30.686483,User_b5f4a70e,user_222@example.com,How would you rate your support?,"We'd love your feedback on your recent support interaction. Best regards,",support
+224,2026-01-27T05:08:30.686483,User_67ced137,user_223@example.com,Meeting Request: Project Sync,"Can we find a time to sync on the project this week? Thanks,",scheduling
+225,2026-02-18T05:08:30.686483,User_2ea26fd6,user_224@example.com,Ticket #1234 Updated,Your support ticket has been updated. Please check the portal.,support
+226,2026-02-06T05:08:30.686483,User_9c2f2df3,user_225@example.com,Action required: Support request,We need more information to process your request. Please reply with logs.,support
+227,2026-01-29T05:08:30.686483,User_c37c6703,user_226@example.com,This month's top reads,Curated articles for you. Enjoy the read!,newsletter
+228,2026-02-11T05:08:30.686483,User_067e2587,user_227@example.com,Weekly Roundup,Here are the top stories from this week. 1. AI news 2. Tech trends...,newsletter
+229,2026-02-20T05:08:30.686483,User_d4e17154,user_228@example.com,This month's top reads,Curated articles for you. Enjoy the read!,newsletter
+230,2026-01-27T05:08:30.686483,User_f5fe1078,user_229@example.com,Meeting Request: Project Sync,Can we find a time to sync on the project this week?,scheduling
+231,2026-02-21T05:08:30.686483,User_92f9e593,user_230@example.com,Community highlights,"See what the community has been building this week. Thanks,",newsletter
+232,2026-02-13T05:08:30.686483,User_2685cfa2,user_231@example.com,Meeting Request: Project Sync,Can we find a time to sync on the project this week?,scheduling
+233,2026-01-29T05:08:30.686483,User_c5e8210c,user_232@example.com,Policy update,We have updated our privacy policy. Please review the changes.,informational
+234,2026-02-12T05:08:30.686483,User_6fb00fee,user_233@example.com,Lunch tomorrow?,"Hey, want to grab lunch tomorrow at 12?",social
+235,2026-02-16T05:08:30.686483,User_915a6fd4,user_234@example.com,Billing Statement,"Your monthly billing statement is ready for review. Best regards,",invoice
+236,2026-02-07T05:08:30.686483,User_e1c2fd5f,user_235@example.com,Happy Birthday!,Wishing you a fantastic birthday! Let's celebrate soon.,social
+237,2026-02-06T05:08:30.686483,User_a510b488,user_236@example.com,Lunch tomorrow?,"Hey, want to grab lunch tomorrow at 12? Thanks,",social
+238,2026-02-15T05:08:30.686483,User_011fee09,user_237@example.com,Catch up?,It's been a while. Are you free for a coffee next week?,social
+239,2026-02-09T05:08:30.686483,User_664c9ea1,user_238@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+240,2026-02-10T05:08:30.686483,User_be7b7f9c,user_239@example.com,Your Daily Digest,"Quick summary of today's most important news. Thanks,",newsletter
+241,2026-02-13T05:08:30.686483,User_01a5d750,user_240@example.com,FYI: Office closed on Friday,"Just a note that the office will be closed this Friday for the holiday. Best regards,",informational
+242,2026-02-09T05:08:30.686483,User_4fffd6cf,user_241@example.com,Following up on my previous email,"Hi, just bubbling this up to the top of your inbox. Any thoughts?",followup
+243,2026-02-14T05:08:30.686483,User_b471a19b,user_242@example.com,Legal Notice,This is a formal notice regarding the contract termination.,legal
+244,2026-02-10T05:08:30.686483,User_123ee46a,user_243@example.com,Status update?,Could you provide a quick status update on the project?,followup
+245,2026-01-31T05:08:30.686483,User_004d913e,user_244@example.com,Invoice #9999 is due,"Please find attached invoice #9999. Payment is due by EOD. Thanks,",invoice
+246,2026-01-28T05:08:30.686483,User_195747c8,user_245@example.com,Q3 Update for Investors,"Here is our quarterly update. Growth is strong. Thanks,",investor
+247,2026-02-04T05:08:30.686483,User_904a3c5b,user_246@example.com,Lunch tomorrow?,"Hey, want to grab lunch tomorrow at 12? Thanks,",social
+248,2026-02-12T05:08:30.686483,User_9740cf20,user_247@example.com,This month's top reads,"Curated articles for you. Enjoy the read! Thanks,",newsletter
+249,2026-01-24T05:08:30.686483,User_58470bca,user_248@example.com,Issue Resolved,"We believe your issue is now resolved. Let us know if you need anything else. Thanks,",support
+250,2026-02-06T05:08:30.686483,User_22adeedc,user_249@example.com,Promotion: upgrade and save,Upgrade your plan before the end of the month to lock in discounted pricing.,marketing
+251,2026-02-09T05:08:30.686483,User_394412a1,user_250@example.com,Weekly Roundup,Here are the top stories from this week. 1. AI news 2. Tech trends...,newsletter
+252,2026-02-03T05:08:30.686483,User_c1c26cb6,user_251@example.com,Release schedule,The next deployment is scheduled for Tuesday night.,informational
+253,2026-02-19T05:08:30.686483,User_aec88149,user_252@example.com,Investment Opportunity,We are opening a new round of funding.,investor
+254,2026-02-05T05:08:30.686483,User_3bc3c0ef,user_253@example.com,Meeting notes,Attached are the notes from today's all-hands meeting.,informational
+255,2026-01-25T05:08:30.686483,User_9a16da54,user_254@example.com,FYI: Office closed on Friday,"Just a note that the office will be closed this Friday for the holiday. Thanks,",informational
+256,2026-02-04T05:08:30.686483,User_c3a5ec40,user_255@example.com,Overdue Invoice Notice,"Your account is past due. Please remit payment immediately to avoid service interruption. Thanks,",invoice
+257,2026-02-20T05:08:30.686483,User_8c6cdf3e,user_256@example.com,Checking in,Wanted to see if you had a chance to review the document I sent.,followup
+258,2026-01-26T05:08:30.686483,User_aadf14d6,user_257@example.com,Due Diligence Request,Please provide the requested documents for the due diligence process.,investor
+259,2026-01-30T05:08:30.686483,User_db72fa7f,user_258@example.com,Community highlights,See what the community has been building this week.,newsletter
+260,2026-01-26T05:08:30.686483,User_92e59ddd,user_259@example.com,Catch up?,It's been a while. Are you free for a coffee next week?,social
+261,2026-02-20T05:08:30.686483,User_e2970d20,user_260@example.com,Payment Receipt,Thanks for your payment. Here is your receipt.,invoice
+262,2026-01-24T05:08:30.686483,User_21993e63,user_261@example.com,Invoice #9999 is due,Please find attached invoice #9999. Payment is due by EOD.,invoice
+263,2026-02-21T05:08:30.686483,User_ea74a1d4,user_262@example.com,Availability for a quick chat,Are you free for 10 mins to discuss the roadmap?,scheduling
+264,2026-01-27T05:08:30.686483,User_880b2c5b,user_263@example.com,Due Diligence Request,Please provide the requested documents for the due diligence process.,investor
+265,2026-02-07T05:08:30.686483,User_1d17558a,user_264@example.com,Shareholder Meeting,Notice of the annual shareholder meeting.,investor
+266,2026-02-11T05:08:30.686483,User_9cba8153,user_265@example.com,Terms of Service Update,We are updating our ToS. Continued use implies consent.,legal
+267,2026-01-27T05:08:30.686483,User_fb05dc69,user_266@example.com,Investment Opportunity,We are opening a new round of funding.,investor
+268,2026-02-19T05:08:30.686483,User_0df1bbe9,user_267@example.com,New features announced,"Check out the new features in AnalyticsTool. We think you'll love them. Thanks,",marketing
+269,2026-01-28T05:08:30.686483,User_21f597f3,user_268@example.com,Special Offer: CloudPlatform just for you,"Hi, we have a limited time offer on CloudPlatform. Get 20% off if you buy now!",marketing
+270,2026-02-03T05:08:30.686483,User_0287475c,user_269@example.com,Action required: Support request,We need more information to process your request. Please reply with logs.,support
+271,2026-02-03T05:08:30.686483,User_48442c08,user_270@example.com,Legal Notice,This is a formal notice regarding the contract termination.,legal
+272,2026-01-26T05:08:30.686483,User_b145ab9b,user_271@example.com,Legal Notice,"This is a formal notice regarding the contract termination. Thanks,",legal
+273,2026-02-19T05:08:30.686483,User_531e1f2a,user_272@example.com,Issue Resolved,We believe your issue is now resolved. Let us know if you need anything else.,support
+274,2026-02-16T05:08:30.686483,User_4c1e4b32,user_273@example.com,Following up on my previous email,"Hi, just bubbling this up to the top of your inbox. Any thoughts?",followup
+275,2026-02-21T05:08:30.686483,User_0e38fbec,user_274@example.com,Don't miss out!,Our biggest sale of the year is happening now. Visit our store.,marketing
+276,2026-02-03T05:08:30.686483,User_b1f1e2f4,user_275@example.com,Ticket #1234 Updated,Your support ticket has been updated. Please check the portal.,support
+277,2026-02-11T05:08:30.686483,User_fd3a9272,user_276@example.com,This month's top reads,Curated articles for you. Enjoy the read!,newsletter
+278,2026-02-11T05:08:30.686483,User_7bdf8026,user_277@example.com,Invoice #9999 is due,Please find attached invoice #9999. Payment is due by EOD.,invoice
+279,2026-02-16T05:08:30.686483,User_4443ae92,user_278@example.com,URGENT: Approval needed,We need your approval on this ASAP to proceed.,urgent_deadline
+280,2026-02-01T05:08:30.686483,User_fd32aee5,user_279@example.com,FYI: Office closed on Friday,Just a note that the office will be closed this Friday for the holiday.,informational
+281,2026-01-27T05:08:30.686483,User_55e38647,user_280@example.com,Follow up on application,"Thanks for applying. We'd like to move to the next stage. Thanks,",recruiter
+282,2026-02-01T05:08:30.686483,User_22ddf8d1,user_281@example.com,URGENT: Approval needed,"We need your approval on this ASAP to proceed. Thanks,",urgent_deadline
+283,2026-02-05T05:08:30.686483,User_1481f0b1,user_282@example.com,Checking in,Wanted to see if you had a chance to review the document I sent.,followup
+284,2026-02-01T05:08:30.686483,User_1aaae118,user_283@example.com,Checking in,Wanted to see if you had a chance to review the document I sent.,followup
+285,2026-02-17T05:08:30.686483,User_10ae135b,user_284@example.com,Action Required by EOD,Please submit your report by end of day today. This is critical.,urgent_deadline
+286,2026-01-25T05:08:30.686483,User_4c088e02,user_285@example.com,FYI: Office closed on Friday,Just a note that the office will be closed this Friday for the holiday.,informational
+287,2026-02-06T05:08:30.686483,User_d4a64dc6,user_286@example.com,Catch up?,"It's been a while. Are you free for a coffee next week? Thanks,",social
+288,2026-01-30T05:08:30.686483,User_ededbd39,user_287@example.com,Overdue Invoice Notice,Your account is past due. Please remit payment immediately to avoid service interruption.,invoice
+289,2026-02-19T05:08:30.686483,User_c06d783d,user_288@example.com,Shareholder Meeting,"Notice of the annual shareholder meeting. Thanks,",investor
+290,2026-02-16T05:08:30.686483,User_aa715b96,user_289@example.com,Q3 Update for Investors,"Here is our quarterly update. Growth is strong. Thanks,",investor
+291,2026-01-31T05:08:30.686483,User_6843e0c7,user_290@example.com,Happy Birthday!,"Wishing you a fantastic birthday! Let's celebrate soon. Best regards,",social
+292,2026-01-26T05:08:30.686483,User_c9ac99ca,user_291@example.com,Overdue Invoice Notice,"Your account is past due. Please remit payment immediately to avoid service interruption. Best regards,",invoice
+293,2026-01-24T05:08:30.686483,User_95a6ccd2,user_292@example.com,Terms of Service Update,We are updating our ToS. Continued use implies consent.,legal
+294,2026-02-17T05:08:30.686483,User_10a161ea,user_293@example.com,Billing Statement,Your monthly billing statement is ready for review.,invoice
+295,2026-01-31T05:08:30.686483,User_461840aa,user_294@example.com,New features announced,"Check out the new features in SuperWidget. We think you'll love them. Thanks,",marketing
+296,2026-02-07T05:08:30.686483,User_d0f47e4d,user_295@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+297,2026-02-17T05:08:30.686483,User_e8e48d2c,user_296@example.com,Q3 Update for Investors,Here is our quarterly update. Growth is strong.,investor
+298,2026-01-28T05:08:30.686483,User_ca9b0119,user_297@example.com,Billing Statement,"Your monthly billing statement is ready for review. Thanks,",invoice
+299,2026-02-04T05:08:30.686483,User_87b1081a,user_298@example.com,Action Required by EOD,Please submit your report by end of day today. This is critical.,urgent_deadline
+300,2026-02-18T05:08:30.686483,User_1df9ccde,user_299@example.com,Don't miss out!,"Our biggest sale of the year is happening now. Visit our store. Best regards,",marketing
+301,2026-02-11T05:08:30.686483,User_df991b33,user_300@example.com,NDA for review,"Please review and sign the attached NDA. Thanks,",legal
+302,2026-02-21T05:08:30.686483,User_e1732ed8,user_301@example.com,Follow up on application,Thanks for applying. We'd like to move to the next stage.,recruiter
+303,2026-02-05T05:08:30.686483,User_0c4978dd,user_302@example.com,Ticket #1234 Updated,Your support ticket has been updated. Please check the portal.,support
+304,2026-01-29T05:08:30.686483,User_4f797aec,user_303@example.com,Compliance Training,"You are required to complete the compliance training by Friday. Thanks,",legal
+305,2026-02-07T05:08:30.686483,User_5f09a45a,user_304@example.com,Don't miss out!,Our biggest sale of the year is happening now. Visit our store.,marketing
+306,2026-02-04T05:08:30.686483,User_792b6914,user_305@example.com,FYI: Office closed on Friday,"Just a note that the office will be closed this Friday for the holiday. Thanks,",informational
+307,2026-01-24T05:08:30.686483,User_6536addc,user_306@example.com,Due Diligence Request,"Please provide the requested documents for the due diligence process. Best regards,",investor
+308,2026-02-20T05:08:30.686483,User_56c6e593,user_307@example.com,Release schedule,"The next deployment is scheduled for Tuesday night. Best regards,",informational
+309,2026-02-04T05:08:30.686483,User_7d6b9f4d,user_308@example.com,URGENT: Approval needed,We need your approval on this ASAP to proceed.,urgent_deadline
+310,2026-01-24T05:08:30.686483,User_2042a2ba,user_309@example.com,Checking in,Wanted to see if you had a chance to review the document I sent.,followup
+311,2026-01-30T05:08:30.686483,User_a72fb802,user_310@example.com,How would you rate your support?,"We'd love your feedback on your recent support interaction. Thanks,",support
+312,2026-02-21T05:08:30.686483,User_2f598fa6,user_311@example.com,Compliance Training,"You are required to complete the compliance training by Friday. Thanks,",legal
+313,2026-02-01T05:08:30.686483,User_94730114,user_312@example.com,Hiring: Software Engineer,We are looking for talented engineers to join our team.,recruiter
+314,2026-02-04T05:08:30.686483,User_10f042fa,user_313@example.com,Terms of Service Update,"We are updating our ToS. Continued use implies consent. Thanks,",legal
+315,2026-02-08T05:08:30.686483,User_4a27d505,user_314@example.com,Ticket #1234 Updated,Your support ticket has been updated. Please check the portal.,support
+316,2026-01-28T05:08:30.686483,User_7124c654,user_315@example.com,Terms of Service Update,We are updating our ToS. Continued use implies consent.,legal
+317,2026-02-03T05:08:30.686483,User_5243b8b3,user_316@example.com,Q3 Update for Investors,Here is our quarterly update. Growth is strong.,investor
+318,2026-02-06T05:08:30.686483,User_a8f594a8,user_317@example.com,Weekly Roundup,Here are the top stories from this week. 1. AI news 2. Tech trends...,newsletter
+319,2026-02-12T05:08:30.686483,User_fe53f45c,user_318@example.com,Calendar Invite: Team Standup,Inviting you to the daily standup meeting.,scheduling
+320,2026-02-17T05:08:30.686483,User_60fc889e,user_319@example.com,New Opportunity at TechCorp,"Hi, I saw your profile and think you'd be a great fit for our Senior Dev role.",recruiter
+321,2026-02-20T05:08:30.686483,User_9d419344,user_320@example.com,Catch up?,It's been a while. Are you free for a coffee next week?,social
+322,2026-02-13T05:08:30.686483,User_e5a8ab37,user_321@example.com,Critical Bug in Production,Site is down. Immediate attention required.,urgent_deadline
+323,2026-02-22T05:08:30.686483,User_0d4926cc,user_322@example.com,Q3 Update for Investors,"Here is our quarterly update. Growth is strong. Thanks,",investor
+324,2026-02-07T05:08:30.686483,User_e07a0273,user_323@example.com,Invoice #9999 is due,Please find attached invoice #9999. Payment is due by EOD.,invoice
+325,2026-02-14T05:08:30.686483,User_f38e25b4,user_324@example.com,Invoice #9999 is due,"Please find attached invoice #9999. Payment is due by EOD. Thanks,",invoice
+326,2026-02-17T05:08:30.686483,User_5a7b4f52,user_325@example.com,Meeting notes,Attached are the notes from today's all-hands meeting.,informational
+327,2026-02-15T05:08:30.686483,User_a751a5ed,user_326@example.com,Promotion: upgrade and save,"Upgrade your plan before the end of the month to lock in discounted pricing. Best regards,",marketing
+328,2026-02-03T05:08:30.686483,User_1d9d7734,user_327@example.com,Release schedule,The next deployment is scheduled for Tuesday night.,informational
+329,2026-02-05T05:08:30.686483,User_0d1a7d36,user_328@example.com,Availability for a quick chat,Are you free for 10 mins to discuss the roadmap?,scheduling
+330,2026-01-29T05:08:30.686483,User_ab4fa632,user_329@example.com,Availability for a quick chat,Are you free for 10 mins to discuss the roadmap?,scheduling
+331,2026-01-30T05:08:30.686483,User_41aac575,user_330@example.com,Release schedule,"The next deployment is scheduled for Tuesday night. Thanks,",informational
+332,2026-02-10T05:08:30.686483,User_8655e87f,user_331@example.com,Release schedule,"The next deployment is scheduled for Tuesday night. Thanks,",informational
+333,2026-02-20T05:08:30.686483,User_5347b29b,user_332@example.com,Action Required by EOD,"Please submit your report by end of day today. This is critical. Best regards,",urgent_deadline
+334,2026-02-07T05:08:30.686483,User_9aa19913,user_333@example.com,Payment Receipt,"Thanks for your payment. Here is your receipt. Thanks,",invoice
+335,2026-02-21T05:08:30.686483,User_6f07181f,user_334@example.com,New Opportunity at TechCorp,"Hi, I saw your profile and think you'd be a great fit for our Senior Dev role. Thanks,",recruiter
+336,2026-01-25T05:08:30.686483,User_c1000a42,user_335@example.com,Calendar Invite: Team Standup,Inviting you to the daily standup meeting.,scheduling
+337,2026-02-18T05:08:30.686483,User_85382831,user_336@example.com,Don't miss out!,"Our biggest sale of the year is happening now. Visit our store. Best regards,",marketing
+338,2026-02-10T05:08:30.686483,User_aac50245,user_337@example.com,Don't miss out!,"Our biggest sale of the year is happening now. Visit our store. Thanks,",marketing
+339,2026-02-04T05:08:30.686483,User_312766b1,user_338@example.com,Special Offer: CloudPlatform just for you,"Hi, we have a limited time offer on CloudPlatform. Get 20% off if you buy now! Thanks,",marketing
+340,2026-01-31T05:08:30.686483,User_19e92aa6,user_339@example.com,New features announced,Check out the new features in DevKit. We think you'll love them.,marketing
+341,2026-02-21T05:08:30.686483,User_d17771ee,user_340@example.com,Checking in,"Wanted to see if you had a chance to review the document I sent. Thanks,",followup
+342,2026-01-26T05:08:30.686483,User_66a450f3,user_341@example.com,This month's top reads,Curated articles for you. Enjoy the read!,newsletter
+343,2026-02-02T05:08:30.686483,User_87621682,user_342@example.com,Meeting Request: Project Sync,Can we find a time to sync on the project this week?,scheduling
+344,2026-02-08T05:08:30.686483,User_233c2af7,user_343@example.com,Availability for a quick chat,Are you free for 10 mins to discuss the roadmap?,scheduling
+345,2026-02-16T05:08:30.686483,User_30dc7607,user_344@example.com,Happy Birthday!,Wishing you a fantastic birthday! Let's celebrate soon.,social
+346,2026-02-22T05:08:30.686483,User_d1d553de,user_345@example.com,Billing Statement,"Your monthly billing statement is ready for review. Best regards,",invoice
+347,2026-01-28T05:08:30.686483,User_d96121d1,user_346@example.com,Community highlights,See what the community has been building this week.,newsletter
+348,2026-02-12T05:08:30.686483,User_bc89450b,user_347@example.com,Checking in,Wanted to see if you had a chance to review the document I sent.,followup
+349,2026-02-21T05:08:30.686483,User_056dddce,user_348@example.com,Promotion: upgrade and save,Upgrade your plan before the end of the month to lock in discounted pricing.,marketing
+350,2026-02-10T05:08:30.686483,User_71e627de,user_349@example.com,Shareholder Meeting,"Notice of the annual shareholder meeting. Thanks,",investor
+351,2026-02-17T05:08:30.686483,User_0ae5a4a9,user_350@example.com,Hiring: Software Engineer,We are looking for talented engineers to join our team.,recruiter
+352,2026-01-30T05:08:30.686483,User_ee00fe64,user_351@example.com,Shareholder Meeting,"Notice of the annual shareholder meeting. Thanks,",investor
+353,2026-02-18T05:08:30.686483,User_5607065e,user_352@example.com,This month's top reads,"Curated articles for you. Enjoy the read! Best regards,",newsletter
+354,2026-01-31T05:08:30.686483,User_30dab81f,user_353@example.com,Due Diligence Request,"Please provide the requested documents for the due diligence process. Best regards,",investor
+355,2026-02-03T05:08:30.686483,User_a432b3fe,user_354@example.com,Calendar Invite: Team Standup,Inviting you to the daily standup meeting.,scheduling
+356,2026-02-01T05:08:30.686483,User_bb9ca067,user_355@example.com,Don't miss out!,"Our biggest sale of the year is happening now. Visit our store. Thanks,",marketing
+357,2026-02-06T05:08:30.686483,User_f60dad72,user_356@example.com,Lunch tomorrow?,"Hey, want to grab lunch tomorrow at 12?",social
+358,2026-01-30T05:08:30.686483,User_f53eb90a,user_357@example.com,Shareholder Meeting,Notice of the annual shareholder meeting.,investor
+359,2026-02-05T05:08:30.686483,User_0277695d,user_358@example.com,Final Notice,"This is your final notice to complete the task before the deadline. Thanks,",urgent_deadline
+360,2026-01-30T05:08:30.686483,User_f657a26a,user_359@example.com,Following up on my previous email,"Hi, just bubbling this up to the top of your inbox. Any thoughts?",followup
+361,2026-02-17T05:08:30.686483,User_260750b2,user_360@example.com,Hiring: Software Engineer,We are looking for talented engineers to join our team.,recruiter
+362,2026-02-15T05:08:30.686483,User_e21a95b0,user_361@example.com,Critical Bug in Production,Site is down. Immediate attention required.,urgent_deadline
+363,2026-02-01T05:08:30.686483,User_147a2f12,user_362@example.com,Weekly Roundup,Here are the top stories from this week. 1. AI news 2. Tech trends...,newsletter
+364,2026-02-15T05:08:30.686483,User_a90adabb,user_363@example.com,Release schedule,"The next deployment is scheduled for Tuesday night. Thanks,",informational
+365,2026-02-03T05:08:30.686483,User_af94facf,user_364@example.com,NDA for review,"Please review and sign the attached NDA. Best regards,",legal
+366,2026-01-28T05:08:30.686483,User_057b7470,user_365@example.com,Meeting Request: Project Sync,"Can we find a time to sync on the project this week? Thanks,",scheduling
+367,2026-02-20T05:08:30.686483,User_f5ecd9e2,user_366@example.com,Due Diligence Request,Please provide the requested documents for the due diligence process.,investor
+368,2026-02-22T05:08:30.686483,User_ee45afc5,user_367@example.com,NDA for review,Please review and sign the attached NDA.,legal
+369,2026-02-02T05:08:30.686483,User_4bbe2849,user_368@example.com,Calendar Invite: Team Standup,Inviting you to the daily standup meeting.,scheduling
+370,2026-02-13T05:08:30.686483,User_423ea5d6,user_369@example.com,Compliance Training,"You are required to complete the compliance training by Friday. Best regards,",legal
+371,2026-02-16T05:08:30.686483,User_800e6cc2,user_370@example.com,This month's top reads,"Curated articles for you. Enjoy the read! Best regards,",newsletter
+372,2026-02-04T05:08:30.686483,User_77153948,user_371@example.com,Ticket #1234 Updated,Your support ticket has been updated. Please check the portal.,support
+373,2026-02-14T05:08:30.686483,User_d4179f03,user_372@example.com,Promotion: upgrade and save,Upgrade your plan before the end of the month to lock in discounted pricing.,marketing
+374,2026-01-24T05:08:30.686483,User_5078063f,user_373@example.com,Special Offer: AnalyticsTool just for you,"Hi, we have a limited time offer on AnalyticsTool. Get 20% off if you buy now!",marketing
+375,2026-02-18T05:08:30.686483,User_e5e2734e,user_374@example.com,Due Diligence Request,Please provide the requested documents for the due diligence process.,investor
+376,2026-02-03T05:08:30.686483,User_93ffe647,user_375@example.com,Ticket #1234 Updated,"Your support ticket has been updated. Please check the portal. Best regards,",support
+377,2026-01-30T05:08:30.686483,User_d0fe9547,user_376@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+378,2026-02-21T05:08:30.686483,User_c010cfb1,user_377@example.com,Don't miss out!,Our biggest sale of the year is happening now. Visit our store.,marketing
+379,2026-02-12T05:08:30.686483,User_5a87294c,user_378@example.com,Investment Opportunity,"We are opening a new round of funding. Best regards,",investor
+380,2026-02-10T05:08:30.686483,User_e88fcbf8,user_379@example.com,Following up on my previous email,"Hi, just bubbling this up to the top of your inbox. Any thoughts?",followup
+381,2026-02-09T05:08:30.686483,User_b28839c5,user_380@example.com,Compliance Training,"You are required to complete the compliance training by Friday. Thanks,",legal
+382,2026-01-28T05:08:30.686483,User_a7cf25ed,user_381@example.com,Lunch tomorrow?,"Hey, want to grab lunch tomorrow at 12?",social
+383,2026-02-16T05:08:30.686483,User_486c1d45,user_382@example.com,Payment Receipt,"Thanks for your payment. Here is your receipt. Best regards,",invoice
+384,2026-02-12T05:08:30.686483,User_aa00b237,user_383@example.com,Meeting notes,Attached are the notes from today's all-hands meeting.,informational
+385,2026-02-20T05:08:30.686483,User_9f92e656,user_384@example.com,Community highlights,See what the community has been building this week.,newsletter
+386,2026-02-18T05:08:30.686483,User_e6bbc2f2,user_385@example.com,Critical Bug in Production,"Site is down. Immediate attention required. Best regards,",urgent_deadline
+387,2026-01-27T05:08:30.686483,User_323b46f7,user_386@example.com,Release schedule,The next deployment is scheduled for Tuesday night.,informational
+388,2026-02-17T05:08:30.686483,User_8a17b38e,user_387@example.com,Follow up on application,Thanks for applying. We'd like to move to the next stage.,recruiter
+389,2026-01-23T05:08:30.686483,User_dc66e71e,user_388@example.com,Your Daily Digest,Quick summary of today's most important news.,newsletter
+390,2026-02-07T05:08:30.686483,User_e370d13b,user_389@example.com,FYI: Office closed on Friday,Just a note that the office will be closed this Friday for the holiday.,informational
+391,2026-02-11T05:08:30.686483,User_2654b335,user_390@example.com,Policy update,"We have updated our privacy policy. Please review the changes. Best regards,",informational
+392,2026-02-20T05:08:30.686483,User_d92d1e30,user_391@example.com,Weekly Roundup,Here are the top stories from this week. 1. AI news 2. Tech trends...,newsletter
+393,2026-02-12T05:08:30.686483,User_c03c3a27,user_392@example.com,Investment Opportunity,We are opening a new round of funding.,investor
+394,2026-02-22T05:08:30.686483,User_d4c51181,user_393@example.com,Payment Receipt,"Thanks for your payment. Here is your receipt. Best regards,",invoice
+395,2026-02-15T05:08:30.686483,User_abd16103,user_394@example.com,How would you rate your support?,"We'd love your feedback on your recent support interaction. Thanks,",support
+396,2026-02-17T05:08:30.686483,User_d414db73,user_395@example.com,URGENT: Approval needed,We need your approval on this ASAP to proceed.,urgent_deadline
+397,2026-01-25T05:08:30.686483,User_2f818f17,user_396@example.com,Status update?,Could you provide a quick status update on the project?,followup
+398,2026-02-13T05:08:30.686483,User_935294e9,user_397@example.com,Weekly Roundup,Here are the top stories from this week. 1. AI news 2. Tech trends...,newsletter
+399,2026-02-06T05:08:30.686483,User_d88e60e6,user_398@example.com,Weekly Roundup,Here are the top stories from this week. 1. AI news 2. Tech trends...,newsletter
+400,2026-02-05T05:08:30.686483,User_208ad140,user_399@example.com,Payment Receipt,Thanks for your payment. Here is your receipt.,invoice
+401,2026-01-26T05:08:30.686483,User_85bde90e,user_400@example.com,Interview Availability,Are you free for a 30-minute phone screen next Tuesday?,recruiter
+402,2026-02-19T05:08:30.686483,User_665d995f,user_401@example.com,URGENT: Approval needed,"We need your approval on this ASAP to proceed. Thanks,",urgent_deadline
+403,2026-02-18T05:08:30.686483,User_d73361a4,user_402@example.com,Interview Availability,Are you free for a 30-minute phone screen next Tuesday?,recruiter
+404,2026-02-01T05:08:30.686483,User_194ad41c,user_403@example.com,Availability for a quick chat,"Are you free for 10 mins to discuss the roadmap? Best regards,",scheduling
+405,2026-01-23T05:08:30.686483,User_248286c9,user_404@example.com,Due Diligence Request,Please provide the requested documents for the due diligence process.,investor
+406,2026-02-22T05:08:30.686483,User_54805232,user_405@example.com,Issue Resolved,We believe your issue is now resolved. Let us know if you need anything else.,support
+407,2026-02-03T05:08:30.686483,User_b0d70a65,user_406@example.com,Gentle reminder,Just a gentle reminder to send over the files when you can.,followup
+408,2026-02-13T05:08:30.686483,User_2ff51013,user_407@example.com,Meeting notes,Attached are the notes from today's all-hands meeting.,informational
+409,2026-02-12T05:08:30.686483,User_983aa5ac,user_408@example.com,Compliance Training,You are required to complete the compliance training by Friday.,legal
+410,2026-02-12T05:08:30.686483,User_43bc22a4,user_409@example.com,Don't miss out!,Our biggest sale of the year is happening now. Visit our store.,marketing
+411,2026-02-07T05:08:30.686483,User_b4b37512,user_410@example.com,Action required: Support request,We need more information to process your request. Please reply with logs.,support
+412,2026-02-12T05:08:30.686483,User_1e8e223b,user_411@example.com,NDA for review,"Please review and sign the attached NDA. Thanks,",legal
+413,2026-02-19T05:08:30.686483,User_64a7d07c,user_412@example.com,Calendar Invite: Team Standup,"Inviting you to the daily standup meeting. Best regards,",scheduling
+414,2026-01-28T05:08:30.686483,User_b0ff969a,user_413@example.com,Meeting Request: Project Sync,"Can we find a time to sync on the project this week? Best regards,",scheduling
+415,2026-02-20T05:08:30.686483,User_3eba7f47,user_414@example.com,Weekly Roundup,"Here are the top stories from this week. 1. AI news 2. Tech trends... Thanks,",newsletter
+416,2026-02-14T05:08:30.686483,User_004973c9,user_415@example.com,Payment Receipt,Thanks for your payment. Here is your receipt.,invoice
+417,2026-02-07T05:08:30.686483,User_e46b3622,user_416@example.com,Due Diligence Request,Please provide the requested documents for the due diligence process.,investor
+418,2026-02-07T05:08:30.686483,User_31b80efe,user_417@example.com,Ticket #1234 Updated,Your support ticket has been updated. Please check the portal.,support
+419,2026-01-27T05:08:30.686483,User_aef3f88f,user_418@example.com,New Opportunity at TechCorp,"Hi, I saw your profile and think you'd be a great fit for our Senior Dev role.",recruiter
+420,2026-02-06T05:08:30.686483,User_4ae7af8a,user_419@example.com,Ticket #1234 Updated,Your support ticket has been updated. Please check the portal.,support
+421,2026-02-17T05:08:30.686483,User_1ea9ab12,user_420@example.com,Rescheduling our call,Something came up. Can we move our call to 3 PM?,scheduling
+422,2026-01-30T05:08:30.686483,User_fa42053e,user_421@example.com,Meeting Request: Project Sync,"Can we find a time to sync on the project this week? Best regards,",scheduling
+423,2026-02-02T05:08:30.686483,User_54e5b1e3,user_422@example.com,How would you rate your support?,"We'd love your feedback on your recent support interaction. Best regards,",support
+424,2026-02-10T05:08:30.686483,User_077a3fad,user_423@example.com,Your Daily Digest,Quick summary of today's most important news.,newsletter
+425,2026-02-17T05:08:30.686483,User_5f142c7e,user_424@example.com,This month's top reads,"Curated articles for you. Enjoy the read! Best regards,",newsletter
+426,2026-02-01T05:08:30.686483,User_6d81d912,user_425@example.com,NDA for review,Please review and sign the attached NDA.,legal
+427,2026-01-25T05:08:30.686483,User_d9aedce2,user_426@example.com,Gentle reminder,"Just a gentle reminder to send over the files when you can. Thanks,",followup
+428,2026-01-27T05:08:30.686483,User_9bfaf66a,user_427@example.com,Availability for a quick chat,Are you free for 10 mins to discuss the roadmap?,scheduling
+429,2026-01-25T05:08:30.686483,User_a63f118f,user_428@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+430,2026-02-21T05:08:30.686483,User_aa60507e,user_429@example.com,New Opportunity at TechCorp,"Hi, I saw your profile and think you'd be a great fit for our Senior Dev role.",recruiter
+431,2026-02-12T05:08:30.686483,User_5b03cd3b,user_430@example.com,Checking in,"Wanted to see if you had a chance to review the document I sent. Best regards,",followup
+432,2026-02-14T05:08:30.686483,User_eb396171,user_431@example.com,Release schedule,The next deployment is scheduled for Tuesday night.,informational
+433,2026-01-28T05:08:30.686483,User_6cf4afd2,user_432@example.com,Meeting Request: Project Sync,"Can we find a time to sync on the project this week? Best regards,",scheduling
+434,2026-02-06T05:08:30.686483,User_9dc101b2,user_433@example.com,Policy update,"We have updated our privacy policy. Please review the changes. Thanks,",informational
+435,2026-02-13T05:08:30.686483,User_952428b2,user_434@example.com,Rescheduling our call,Something came up. Can we move our call to 3 PM?,scheduling
+436,2026-02-12T05:08:30.686483,User_bb795cf2,user_435@example.com,Promotion: upgrade and save,Upgrade your plan before the end of the month to lock in discounted pricing.,marketing
+437,2026-01-28T05:08:30.686483,User_9a9c1923,user_436@example.com,Meeting notes,Attached are the notes from today's all-hands meeting.,informational
+438,2026-02-21T05:08:30.686483,User_ab3f57b2,user_437@example.com,Hiring: Software Engineer,We are looking for talented engineers to join our team.,recruiter
+439,2026-02-08T05:08:30.686483,User_04bf9d3c,user_438@example.com,Compliance Training,You are required to complete the compliance training by Friday.,legal
+440,2026-01-31T05:08:30.686483,User_d5668f0c,user_439@example.com,Availability for a quick chat,Are you free for 10 mins to discuss the roadmap?,scheduling
+441,2026-02-08T05:08:30.686483,User_08e53d71,user_440@example.com,Legal Notice,"This is a formal notice regarding the contract termination. Thanks,",legal
+442,2026-02-14T05:08:30.686483,User_7d88f51a,user_441@example.com,Catch up?,It's been a while. Are you free for a coffee next week?,social
+443,2026-02-18T05:08:30.686483,User_1190e28e,user_442@example.com,Investment Opportunity,We are opening a new round of funding.,investor
+444,2026-01-31T05:08:30.686483,User_58f3cb2b,user_443@example.com,Gentle reminder,Just a gentle reminder to send over the files when you can.,followup
+445,2026-02-07T05:08:30.686483,User_bec6a392,user_444@example.com,FYI: Office closed on Friday,Just a note that the office will be closed this Friday for the holiday.,informational
+446,2026-01-28T05:08:30.686483,User_a33adbc9,user_445@example.com,Interview Availability,Are you free for a 30-minute phone screen next Tuesday?,recruiter
+447,2026-02-19T05:08:30.686483,User_cdf7a05a,user_446@example.com,Promotion: upgrade and save,Upgrade your plan before the end of the month to lock in discounted pricing.,marketing
+448,2026-02-15T05:08:30.686483,User_df549703,user_447@example.com,Community highlights,"See what the community has been building this week. Best regards,",newsletter
+449,2026-02-22T05:08:30.686483,User_07ca73ba,user_448@example.com,Action required: Support request,"We need more information to process your request. Please reply with logs. Best regards,",support
+450,2026-01-27T05:08:30.686483,User_c744d22a,user_449@example.com,Overdue Invoice Notice,Your account is past due. Please remit payment immediately to avoid service interruption.,invoice
+451,2026-02-21T05:08:30.686483,User_76dc6837,user_450@example.com,Shareholder Meeting,Notice of the annual shareholder meeting.,investor
+452,2026-02-12T05:08:30.686483,User_89a8322f,user_451@example.com,Meeting notes,Attached are the notes from today's all-hands meeting.,informational
+453,2026-02-15T05:08:30.686483,User_18ed3ab9,user_452@example.com,Availability for a quick chat,Are you free for 10 mins to discuss the roadmap?,scheduling
+454,2026-02-14T05:08:30.686483,User_0082b719,user_453@example.com,Availability for a quick chat,"Are you free for 10 mins to discuss the roadmap? Thanks,",scheduling
+455,2026-01-24T05:08:30.686483,User_884586e5,user_454@example.com,Don't miss out!,"Our biggest sale of the year is happening now. Visit our store. Thanks,",marketing
+456,2026-02-09T05:08:30.686483,User_828f3555,user_455@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+457,2026-02-06T05:08:30.686483,User_566c4d39,user_456@example.com,Action Required by EOD,Please submit your report by end of day today. This is critical.,urgent_deadline
+458,2026-01-23T05:08:30.686483,User_ec47e089,user_457@example.com,New features announced,Check out the new features in AnalyticsTool. We think you'll love them.,marketing
+459,2026-02-06T05:08:30.686483,User_fa4c3c3a,user_458@example.com,Payment Receipt,"Thanks for your payment. Here is your receipt. Thanks,",invoice
+460,2026-02-21T05:08:30.686483,User_620387e3,user_459@example.com,Hiring: Software Engineer,"We are looking for talented engineers to join our team. Thanks,",recruiter
+461,2026-01-30T05:08:30.686483,User_fb941b3a,user_460@example.com,Action required: Support request,We need more information to process your request. Please reply with logs.,support
+462,2026-02-01T05:08:30.686483,User_08182229,user_461@example.com,Issue Resolved,We believe your issue is now resolved. Let us know if you need anything else.,support
+463,2026-01-28T05:08:30.686483,User_8eafb2a1,user_462@example.com,Status update?,Could you provide a quick status update on the project?,followup
+464,2026-02-11T05:08:30.686483,User_9f833953,user_463@example.com,Action required: Support request,We need more information to process your request. Please reply with logs.,support
+465,2026-02-03T05:08:30.686483,User_90a081f1,user_464@example.com,Weekly Roundup,"Here are the top stories from this week. 1. AI news 2. Tech trends... Best regards,",newsletter
+466,2026-02-11T05:08:30.686483,User_c19a92dc,user_465@example.com,Compliance Training,You are required to complete the compliance training by Friday.,legal
+467,2026-02-03T05:08:30.686483,User_b5f3d692,user_466@example.com,New features announced,Check out the new features in DevKit. We think you'll love them.,marketing
+468,2026-02-16T05:08:30.686483,User_9995477f,user_467@example.com,Overdue Invoice Notice,Your account is past due. Please remit payment immediately to avoid service interruption.,invoice
+469,2026-01-27T05:08:30.686483,User_fa741ada,user_468@example.com,Catch up?,It's been a while. Are you free for a coffee next week?,social
+470,2026-02-10T05:08:30.686483,User_6aa4811b,user_469@example.com,NDA for review,Please review and sign the attached NDA.,legal
+471,2026-01-28T05:08:30.686483,User_4149a56f,user_470@example.com,Shareholder Meeting,"Notice of the annual shareholder meeting. Thanks,",investor
+472,2026-02-20T05:08:30.686483,User_25c4ba5b,user_471@example.com,New features announced,"Check out the new features in DevKit. We think you'll love them. Best regards,",marketing
+473,2026-02-03T05:08:30.686483,User_8ec33bef,user_472@example.com,How would you rate your support?,We'd love your feedback on your recent support interaction.,support
+474,2026-02-08T05:08:30.686483,User_8d274530,user_473@example.com,Happy Birthday!,"Wishing you a fantastic birthday! Let's celebrate soon. Thanks,",social
+475,2026-02-15T05:08:30.686483,User_17b04f64,user_474@example.com,Action Required by EOD,Please submit your report by end of day today. This is critical.,urgent_deadline
+476,2026-02-18T05:08:30.686483,User_31e64ada,user_475@example.com,Rescheduling our call,"Something came up. Can we move our call to 3 PM? Best regards,",scheduling
+477,2026-02-03T05:08:30.686483,User_9e1f3aa9,user_476@example.com,Hiring: Software Engineer,"We are looking for talented engineers to join our team. Thanks,",recruiter
+478,2026-01-29T05:08:30.686483,User_0512ee64,user_477@example.com,Lunch tomorrow?,"Hey, want to grab lunch tomorrow at 12? Thanks,",social
+479,2026-01-29T05:08:30.686483,User_1d6cbdba,user_478@example.com,Weekly Roundup,"Here are the top stories from this week. 1. AI news 2. Tech trends... Best regards,",newsletter
+480,2026-02-11T05:08:30.686483,User_989c8718,user_479@example.com,New features announced,Check out the new features in CloudPlatform. We think you'll love them.,marketing
+481,2026-02-17T05:08:30.686483,User_c20b4075,user_480@example.com,Event reminder,Reminder: The team dinner is tonight at 7 PM.,social
+482,2026-02-06T05:08:30.686483,User_39c52b3f,user_481@example.com,Overdue Invoice Notice,Your account is past due. Please remit payment immediately to avoid service interruption.,invoice
+483,2026-02-15T05:08:30.686483,User_f1f88c32,user_482@example.com,Follow up on application,Thanks for applying. We'd like to move to the next stage.,recruiter
+484,2026-02-03T05:08:30.686483,User_69197e66,user_483@example.com,NDA for review,"Please review and sign the attached NDA. Best regards,",legal
+485,2026-02-17T05:08:30.686483,User_f8026266,user_484@example.com,Shareholder Meeting,Notice of the annual shareholder meeting.,investor
+486,2026-02-05T05:08:30.686483,User_85be60b6,user_485@example.com,Following up on my previous email,"Hi, just bubbling this up to the top of your inbox. Any thoughts?",followup
+487,2026-02-15T05:08:30.686483,User_0fdafb95,user_486@example.com,Weekly Roundup,Here are the top stories from this week. 1. AI news 2. Tech trends...,newsletter
+488,2026-01-27T05:08:30.686483,User_3fea2d4e,user_487@example.com,Hiring: Software Engineer,We are looking for talented engineers to join our team.,recruiter
+489,2026-02-15T05:08:30.686483,User_cb0cf6de,user_488@example.com,Meeting Request: Project Sync,Can we find a time to sync on the project this week?,scheduling
+490,2026-01-31T05:08:30.686483,User_6e45560e,user_489@example.com,Interview Availability,"Are you free for a 30-minute phone screen next Tuesday? Thanks,",recruiter
+491,2026-01-28T05:08:30.686483,User_71838cdb,user_490@example.com,Action required: Support request,We need more information to process your request. Please reply with logs.,support
+492,2026-02-22T05:08:30.686483,User_11b8da15,user_491@example.com,Legal Notice,This is a formal notice regarding the contract termination.,legal
+493,2026-02-03T05:08:30.686483,User_e94ced2b,user_492@example.com,Q3 Update for Investors,Here is our quarterly update. Growth is strong.,investor
+494,2026-02-18T05:08:30.686483,User_e42876f5,user_493@example.com,Interview Availability,Are you free for a 30-minute phone screen next Tuesday?,recruiter
+495,2026-02-22T05:08:30.686483,User_335aab5e,user_494@example.com,NDA for review,"Please review and sign the attached NDA. Thanks,",legal
+496,2026-02-15T05:08:30.686483,User_3e13909e,user_495@example.com,Community highlights,See what the community has been building this week.,newsletter
+497,2026-01-23T05:08:30.686483,User_85c85a10,user_496@example.com,Checking in,"Wanted to see if you had a chance to review the document I sent. Thanks,",followup
+498,2026-02-15T05:08:30.686483,User_57cc90b7,user_497@example.com,Critical Bug in Production,Site is down. Immediate attention required.,urgent_deadline
+499,2026-02-10T05:08:30.686483,User_f80108e3,user_498@example.com,Following up on my previous email,"Hi, just bubbling this up to the top of your inbox. Any thoughts? Thanks,",followup
+500,2026-01-29T05:08:30.686483,User_f31fce25,user_499@example.com,FYI: Office closed on Friday,Just a note that the office will be closed this Friday for the holiday.,informational
