@@ -1,51 +1,25 @@
 from __future__ import print_function
-import os.path
 import base64
-from dotenv import load_dotenv
-import os
-from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
-from google.auth.transport.requests import Request
-import pickle
+from google.oauth2.credentials import Credentials # Import Credentials class
+from google.auth.transport.requests import Request as GoogleAuthRequest
 
-# Permission scope
+# Permission scope (ensure these match the scopes requested in app/routers/auth.py)
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
-load_dotenv()
+def get_gmail_service(credentials: Credentials):
+    """
+    Returns a Google Gmail API service object using provided credentials.
+    """
+    if not credentials or not credentials.valid:
+        raise ValueError("Invalid or expired Google credentials provided.")
+    
+    # Refresh token if expired
+    if credentials.expired and credentials.refresh_token:
+        credentials.refresh(GoogleAuthRequest()) # Needs Request from google.auth.transport.requests
 
-CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
-CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
-
-def authenticate_gmail():
-    creds = None
-
-    # token.pickle stores login session
-    if os.path.exists('token.pickle'):
-        with open('token.pickle', 'rb') as token:
-            creds = pickle.load(token)
-
-    # If not logged in → open Google login
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_config(
-                {
-                    "web": { # Using "web" type for consistency with calendar_api for InstalledAppFlow, if registered as web app.
-                    "client_id": CLIENT_ID,
-                    "client_secret": CLIENT_SECRET,
-                    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-                    "token_uri": "https://oauth2.googleapis.com/token"
-                    }
-                },
-            SCOPES,
-            )
-            creds = flow.run_local_server(port=0)
-
-        with open('token.pickle', 'wb') as token:
-            pickle.dump(creds, token)
-
-    return creds
+    service = build('gmail', 'v1', credentials=credentials)
+    return service
 
 def get_email_details(service, msg_id):
     message = service.users().messages().get(
@@ -81,31 +55,3 @@ def get_email_details(service, msg_id):
             body = base64.urlsafe_b64decode(data).decode('utf-8')
 
     return sender, subject, body
-
-def read_emails():
-    creds = authenticate_gmail()
-
-    service = build('gmail', 'v1', credentials=creds)
-
-    results = service.users().messages().list(
-        userId='me',
-        maxResults=5
-    ).execute()
-
-    messages = results.get('messages', [])
-
-    if not messages:
-        print("No messages found.")
-        return
-
-    for msg in messages:
-        sender, subject, body = get_email_details(service, msg['id'])
-
-        print("\n-------------------")
-        print("From:", sender)
-        print("Subject:", subject)
-        print("Body:", body[:200])
-
-
-if __name__ == '__main__':
-    read_emails()

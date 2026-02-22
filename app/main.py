@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from starlette.middleware.sessions import SessionMiddleware
-from app.routers import auth
+from app.routers import auth, gmail
 import os
 
 app = FastAPI()
@@ -12,6 +12,8 @@ app.add_middleware(SessionMiddleware, secret_key=os.getenv("SESSION_SECRET_KEY",
 
 # Include the authentication router
 app.include_router(auth.router, prefix="/auth", tags=["Auth"])
+# Include the Gmail router
+app.include_router(gmail.router, prefix="/api/gmail", tags=["Gmail API"])
 
 @app.get("/")
 async def read_root():
@@ -24,3 +26,4 @@ if __name__ == "__main__":
     # Use "app.main:app" to run the app from this file directly if needed,
     # or from src/main_processor.py which is now configured for it.
     uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
+
