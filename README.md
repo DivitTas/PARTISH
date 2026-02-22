@@ -24,8 +24,17 @@ PS. This is also a homage to our good friend Partish.
    ```
    This will generate `models/urgency_model.pkl` and `models/vectorizer.pkl`.
 
-2. **Run Analysis:**
-   You can test the extraction logic directly:
+2. **Run Analysis (for Test Emails in JSON_Extracter.py):**
+   You can test the extraction logic directly on predefined examples:
    ```bash
    python src/JSON_Extracter.py
    ```
+
+3. **Analyze a Custom Email:**
+   To analyze a single email you provide:
+   1. Open `src/analyze_my_email.py` and modify `your_email_subject` and `your_email_body` variables.
+   2. Run the script:
+      ```bash
+      python src/analyze_my_email.py
+      ```
+
