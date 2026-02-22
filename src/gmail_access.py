@@ -31,17 +31,17 @@ def authenticate_gmail():
         else:
             flow = InstalledAppFlow.from_client_config(
                 {
-                    "installed": {
+                    "web": { # Using "web" type for consistency with calendar_api for InstalledAppFlow, if registered as web app.
                     "client_id": CLIENT_ID,
                     "client_secret": CLIENT_SECRET,
                     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
                     "token_uri": "https://oauth2.googleapis.com/token",
-                    "redirect_uris": ["http://localhost:8080/"]
+                    "redirect_uris": ["http://localhost"] # Use http://localhost for run_local_server(port=0)
                     }
                 },
             SCOPES,
             )
-            creds = flow.run_local_server(port=8080)
+            creds = flow.run_local_server(port=0)
 
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
