@@ -11,17 +11,9 @@ if not (os.path.exists(MODEL_PATH) and os.path.exists(VECTORIZER_PATH)):
     print("Proceeding with rule-based analysis only (no ML predictions).")
 
 # --- Example Email Content ---
-# You can replace these with the subject and body of any email you want to analyze.
-your_email_subject = "Urgent: Project Delta Review Required"
-your_email_body = """
-Hi Team,
-
-The final review for Project Delta is due by EOD on Friday. Your immediate feedback
-is critical to meet our client's submission deadline. Please prioritize this.
-
-Best regards,
-Sarah
-"""
+# Replace these with the subject and body of any email you want to analyze.
+your_email_subject = "Example Subject for Analysis"
+your_email_body = "This is an example email body. It contains some text that can be analyzed for sentiment and urgency."
 
 # Combine subject and body for analysis, as the model was trained on both.
 email_to_analyze = your_email_subject + " " + your_email_body
