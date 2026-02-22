@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from starlette.middleware.sessions import SessionMiddleware
-from app.routers import auth, gmail
+from app.routers import auth, gmail, calendar
 import os
 
 app = FastAPI()
@@ -14,6 +14,8 @@ app.add_middleware(SessionMiddleware, secret_key=os.getenv("SESSION_SECRET_KEY",
 app.include_router(auth.router, prefix="/auth", tags=["Auth"])
 # Include the Gmail router
 app.include_router(gmail.router, prefix="/api/gmail", tags=["Gmail API"])
+# Include the Calendar router
+app.include_router(calendar.router, prefix="/api/calendar", tags=["Calendar API"])
 
 @app.get("/")
 async def read_root():

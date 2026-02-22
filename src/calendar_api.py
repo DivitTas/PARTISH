@@ -1,63 +1,28 @@
 import os
-import pickle
 from datetime import datetime, timedelta
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
+from google.oauth2.credentials import Credentials
+from google.auth.transport.requests import Request as GoogleAuthRequest
 
 # If modifying these scopes, delete the file token.pickle.
 # 'offline_access' is important for long-lived access tokens
 SCOPES = ['https://www.googleapis.com/auth/calendar.events', 'https://www.googleapis.com/auth/calendar.readonly']
 # Alternatively, for full calendar access: ['https://www.googleapis.com/auth/calendar']
 
-TOKEN_PICKLE_CALENDAR = 'token_calendar.pickle'
-# CLIENT_SECRETS_FILE is no longer used directly for client ID/Secret.
-# These should be set as environment variables.
-GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CALENDAR_CLIENT_ID')
-GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CALENDAR_CLIENT_SECRET')
-
-def get_calendar_service():
-    """Shows basic usage of the Google Calendar API.
+def get_calendar_service(credentials: Credentials):
     """
-    creds = None
-    if os.path.exists(TOKEN_PICKLE_CALENDAR):
-        with open(TOKEN_PICKLE_CALENDAR, 'rb') as token:
-            creds = pickle.load(token)
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            if not GOOGLE_CLIENT_ID or not GOOGLE_CLIENT_SECRET:
-                print("Error: GOOGLE_CALENDAR_CLIENT_ID and GOOGLE_CALENDAR_CLIENT_SECRET environment variables must be set.")
-                print("Alternatively, ensure a client_secret.json file is available if using that method (commented out).")
-                return None
+    Returns a Google Calendar API service object using provided credentials.
+    """
+    if not credentials or not credentials.valid:
+        raise ValueError("Invalid or expired Google credentials provided.")
+    
+    # Refresh token if expired
+    if credentials.expired and credentials.refresh_token:
+        credentials.refresh(GoogleAuthRequest())
 
-            # Create an InstalledAppFlow with client ID and secret from env vars
-            flow = InstalledAppFlow.from_client_config(
-                client_config={
-                    "web": { # Or "installed" depending on your client type
-                        "client_id": GOOGLE_CLIENT_ID,
-                        "client_secret": GOOGLE_CLIENT_SECRET,
-                        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-                        "token_uri": "https://oauth2.googleapis.com/token",
-                        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs"
-                    }
-                },
-                scopes=SCOPES
-            )
-            creds = flow.run_local_server(port=0)
-        with open(TOKEN_PICKLE_CALENDAR, 'wb') as token:
-            pickle.dump(creds, token)
-
-    if creds:
-        service = build('calendar', 'v3', credentials=creds)
-        return service
-    return None
+    service = build('calendar', 'v3', credentials=credentials)
+    return service
 
 def create_calendar_event(
     service,
