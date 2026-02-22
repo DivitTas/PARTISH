@@ -1,0 +1,249 @@
+id,date,sender_name,sender_email,subject,body,intent
+84,2026-02-20T00:30:00,Asha Saxena,asha.s@legal.guard,Compliance request - quick note,Quick note: We need confirmation of compliance with the new standard. Please provide the requested documents.,legal
+54,2026-02-15T10:15:00,Neil Verma,neil.v@followup.team,Gentle reminder about deliverables,Checking in — we haven't received the final assets. Please share when you can. Please let me know what you think.,followup
+71,2026-02-18T12:44:00,Neil Mehta,neil.m@itops.company,Steps to reproduce the bug,Quick note: Please follow these steps and let us know whether you can reproduce the issue.,support
+46,2026-02-20T09:07:00,Anika Desai,anika.d@seedfunds.co,Quick investor chat?,I’ve got a few questions about the deck. Are you free for a 15-minute call before Thursday? Please let me know what you think.,investor
+45,2026-02-16T06:12:00,Kavya Joshi,kavya.j@seedfunds.co,Intro from partner,Intro to one of our partners who might be interested in the next round. Would you like to connect? Please let me know what you think. Please share the updated cap table and 3 months of runway projections.,investor
+40,2026-02-18T02:02:00,Maya Mehta,maya.m@hiringhub.io,Role alignment call,"Hello,
+
+Can we have a short call to align on the role and expectations? 30 minutes should work.",recruiter
+23,2026-02-16T06:41:00,Daniel Malhotra,daniel.m@newsletter.marketing,Monthly roundup,"Here’s what’s new this month — product updates, tips, and community highlights. Please let me know what you think.",marketing
+81,2026-02-17T08:12:00,Omar Joshi,omar.j@compliance.team,Urgent: legal hold,Immediate: legal hold on communications related to the project. Preserve all records. Please let me know what you think. Please preserve all related communications.,legal
+11,2026-02-20T16:08:00,Tara Desai,tara.d@financecorp.com,Response needed ASAP - quick note,"Hello,
+
+We've hit a blocker and need your confirmation ASAP to proceed. A delay will affect launch timelines.",urgent_deadline
+1,2026-02-18T13:47:00,Omar Joshi,omar.j@team.sync,Quick call this week?,"I’ve reviewed the proposal and would love to discuss a few details. Are you available for a 30-minute Zoom sometime this week? Ideally before Thursday evening, since we’re finalizing on Friday. Prefer mornings, but can adjust for your timezone.",scheduling
+19,2026-02-16T19:01:00,Kavya Joshi,kavya.j@promo-mail.com,Promotion: upgrade and save,Quick note: Upgrade before end of month to lock in discounted pricing.,marketing
+31,2026-02-16T04:05:00,Tara Joshi,tara.j@updates.company,Team retrospective notes,Quick note: Attached are notes from yesterday's retrospective. Please read when convenient.,informational
+74,2026-02-20T04:51:00,Priya Iyer,priya.i@help.service,Steps to reproduce the bug,"Hi,
+
+Please follow these steps and let us know whether you can reproduce the issue.
+
+Best,
+Team",support
+34,2026-02-19T13:59:00,Owen Reddy,owen.r@updates.company,FYI: server maintenance,A reminder that we have planned maintenance on Saturday; services may be briefly unavailable.,informational
+91,2026-02-18T22:07:00,Kavya Khan,kavya.k@news.monthly,Research brief: AI trends,Quick note: Here’s a short brief on AI trends this quarter. No action required.,newsletter
+5,2026-02-17T02:18:00,Maya Desai,maya.d@team.sync,Quick call this week?,"Quick note: I’ve reviewed the proposal and would love to discuss a few details. Are you available for a 30-minute Zoom sometime this week? Ideally before Thursday evening, since we’re finalizing on Friday.",scheduling
+77,2026-02-19T19:17:00,Neil Nair,neil.n@compliance.team,Notice of policy change,"Hi,
+
+Legal notice: changes to terms. Review and acknowledge receipt.
+
+Best,
+Team",legal
+78,2026-02-16T16:46:00,Anika Reddy,anika.r@legal.guard,Notice of policy change,"Hello,
+
+Legal notice: changes to terms. Review and acknowledge receipt.",legal
+13,2026-02-20T05:21:00,Maya Chopra,maya.c@acme.vc,Response needed ASAP - quick note,"Hello,
+
+We've hit a blocker and need your confirmation ASAP to proceed. A delay will affect launch timelines. Please respond within 48 hours or we will proceed without your input.",urgent_deadline
+32,2026-02-19T06:45:00,Vikram Khan,vikram.k@product-updates.io,FYI: server maintenance,"Hello,
+
+A reminder that we have planned maintenance on Saturday; services may be briefly unavailable.",informational
+56,2026-02-21T16:11:00,Asha Singh,asha.s@followup.team,Reminder: feedback needed,"Hi,
+
+Friendly reminder to send feedback on the mockups. Your input is important.
+
+Best,
+Team",followup
+89,2026-02-18T14:35:00,Arjun Kapoor,arjun.k@digest.today,Community highlights - quick note,"Hi,
+
+Members shared wins and resources — a quick roundup of the best conversations.
+
+Best,
+Team",newsletter
+27,2026-02-21T09:24:00,Ravi Kapoor,ravi.k@noreply.service,Release schedule,"Hi,
+
+The next release is scheduled for Monday. This email shares the planned changes and timelines.
+
+Best,
+Team",informational
+43,2026-02-21T09:11:00,Priya Kapoor,priya.k@venturelab.vc,Due diligence request,"Hi,
+
+Please provide access to the data room and the cap table; we need this for due diligence.
+
+Best,
+Team",investor
+70,2026-02-15T18:36:00,Maya Saxena,maya.s@help.service,Ticket updated: #8932,"Hi,
+
+Your support ticket has been updated. Please review the response and confirm if the issue is resolved.
+
+Best,
+Team",support
+16,2026-02-16T11:46:00,Kavya Saxena,kavya.s@acme.vc,Response needed ASAP,"Hi,
+
+We've hit a blocker and need your confirmation ASAP to proceed. A delay will affect launch timelines.
+
+Best,
+Team This needs to be done within 24 hours.",urgent_deadline
+41,2026-02-15T18:23:00,Daniel Verma,daniel.v@hiringhub.io,Position update,"Hello,
+
+Thanks for applying. We’re moving to the next stage and need one more coding sample.",recruiter
+97,2026-02-20T19:42:00,Zoe Gupta,zoe.g@community.group,Event reminder - quick note,Reminder: the event starts at 6 PM tomorrow. See you there!,social
+10,2026-02-22T13:16:00,Rahul Desai,rahul.d@legalguard.co,Response needed ASAP,"Hi,
+
+We've hit a blocker and need your confirmation ASAP to proceed. A delay will affect launch timelines.
+
+Best,
+Team We need final numbers by tomorrow EOD.",urgent_deadline
+73,2026-02-21T20:40:00,Rahul Singh,rahul.s@help.service,Service outage resolved,The outage is resolved. We're monitoring systems. No further action required.,support
+12,2026-02-16T21:24:00,Priya Gupta,priya.g@acme.vc,Need review by EOD,Please review the attached doc and send feedback by EOD today — we need to finalize the plan for the investor meeting tomorrow morning.,urgent_deadline
+48,2026-02-19T10:45:00,Tara Reddy,tara.r@seedfunds.co,Due diligence request,Please provide access to the data room and the cap table; we need this for due diligence. Please share the updated cap table and 3 months of runway projections.,investor
+86,2026-02-16T16:07:00,Tara Rao,tara.r@news.monthly,This month's top reads,"Hi,
+
+Curated articles and insights for founders and builders — enjoy the monthly digest.
+
+Best,
+Team",newsletter
+29,2026-02-20T10:03:00,Owen Patel,owen.p@product-updates.io,Weekly product update,"Hello,
+
+FYI — we rolled out several improvements to the dashboard. No action required unless you encounter issues.",informational
+94,2026-02-15T22:47:00,Esha Mehta,esha.m@community.group,Catch up?,"Hello,
+
+It’s been a while — fancy a quick catch-up sometime?",social
+6,2026-02-18T18:05:00,Arjun Patel,arjun.p@calendar.inc,Schedule a demo,"Hello,
+
+Would love to demo the new dashboard. Any 45-minute slot next week that works for you? I prefer mornings IST.",scheduling
+67,2026-02-15T20:14:00,Asha Chopra,asha.c@invoices.acme,Overdue invoice notice,Your account shows a past-due balance. Immediate payment required to avoid penalties.,invoice
+66,2026-02-20T21:17:00,Esha Bose,esha.b@billing.services,Receipt for payment,Thank you — this is your receipt for the recent payment. No action needed. Please let me know what you think.,invoice
+36,2026-02-16T13:16:00,Owen Rao,owen.r@recruiters.net,Position update - quick note,Thanks for applying. We’re moving to the next stage and need one more coding sample.,recruiter
+17,2026-02-17T17:33:00,Rahul Chopra,rahul.c@acme.vc,Immediate attention required,"Hi,
+
+Security alert requires your immediate acknowledgement and response — please check the details below and confirm.
+
+Best,
+Team",urgent_deadline
+50,2026-02-22T07:18:00,Daniel Bose,daniel.b@seedfunds.co,Follow-up from meeting - quick note,"Hello,
+
+Great meeting yesterday — can you share the updated financials by Friday?",investor
+35,2026-02-23T02:45:00,Lina Kapoor,lina.k@talentfinder.co,Hiring: Software Engineer,"Hi,
+
+Hi — I found your profile and would love to talk about a backend role. Are you available for a 20-minute chat this week?
+
+Best,
+Team",recruiter
+8,2026-02-18T14:29:00,Priya Chopra,priya.c@team.sync,Quick call this week?,"Hello,
+
+I’ve reviewed the proposal and would love to discuss a few details. Are you available for a 30-minute Zoom sometime this week? Ideally before Thursday evening, since we’re finalizing on Friday. Prefer mornings, but can adjust for your timezone.",scheduling
+96,2026-02-19T14:37:00,Anika Malhotra,anika.m@community.group,Coffee next week?,"Hi,
+
+Hey — want to grab coffee next week? I'm free Tue/Thu afternoon.
+
+Best,
+Team",social
+28,2026-02-17T15:18:00,Owen Kumar,owen.k@noreply.service,Release schedule,The next release is scheduled for Monday. This email shares the planned changes and timelines. Please let me know what you think.,informational
+20,2026-02-15T16:04:00,Asha Mehta,asha.m@promo-mail.com,New features announced,"Hello,
+
+We launched new capabilities that help teams collaborate faster. See the highlights in the link.",marketing
+82,2026-02-19T12:53:00,Rahul Khan,rahul.k@legal.guard,Compliance request,"Hi,
+
+We need confirmation of compliance with the new standard. Please provide the requested documents.
+
+Best,
+Team Please preserve all related communications.",legal
+26,2026-02-16T16:10:00,Owen Shah,owen.s@updates.company,FYI: server maintenance,A reminder that we have planned maintenance on Saturday; services may be briefly unavailable.,informational
+63,2026-02-19T00:14:00,Owen Chopra,owen.c@invoices.acme,Overdue invoice notice,Quick note: Your account shows a past-due balance. Immediate payment required to avoid penalties. Payment due by the end of the month.,invoice
+14,2026-02-17T05:19:00,Priya Iyer,priya.i@legalguard.co,Need review by EOD,Please review the attached doc and send feedback by EOD today — we need to finalize the plan for the investor meeting tomorrow morning. Please let me know what you think.,urgent_deadline
+25,2026-02-18T11:28:00,Omar Malhotra,omar.m@promo-mail.com,New features announced,Quick note: We launched new capabilities that help teams collaborate faster. See the highlights in the link.,marketing
+4,2026-02-16T11:24:00,Neil Bose,neil.b@calendar.inc,Schedule a demo,Would love to demo the new dashboard. Any 45-minute slot next week that works for you? I prefer mornings IST. Please let me know what you think. I can do a 30-minute slot anytime after 3 PM IST.,scheduling
+18,2026-02-22T06:41:00,Neil Rao,neil.r@growthbuzz.co,New features announced,"Hello,
+
+We launched new capabilities that help teams collaborate faster. See the highlights in the link.",marketing
+39,2026-02-18T08:28:00,Samir Khan,samir.k@talentfinder.co,Hiring: Software Engineer,Hi — I found your profile and would love to talk about a backend role. Are you available for a 20-minute chat this week?,recruiter
+9,2026-02-20T21:17:00,Kavya Patel,kavya.p@acme.vc,Action required: contract deadline,This is urgent — contract needs your signature within 24 hours or the slot will be given to another party. Please let me know what you think. We need final numbers by tomorrow EOD.,urgent_deadline
+79,2026-02-15T11:18:00,Rahul Malhotra,rahul.m@contracts.co,Compliance request,Quick note: We need confirmation of compliance with the new standard. Please provide the requested documents. Please preserve all related communications.,legal
+7,2026-02-20T20:13:00,Zoe Kapoor,zoe.k@meetings.io,Availability for a quick chat,Are you free for a short call tomorrow morning? 15 minutes should be enough to clear a couple of items. Please let me know what you think.,scheduling
+65,2026-02-21T13:55:00,Asha Mehta,asha.m@payments.co,Billing question - quick note,"Hello,
+
+We noticed an issue with the payment method on file. Please update billing details.",invoice
+37,2026-02-19T07:21:00,Omar Rao,omar.r@hiringhub.io,Hiring: Software Engineer,"Hello,
+
+Hi — I found your profile and would love to talk about a backend role. Are you available for a 20-minute chat this week?",recruiter
+90,2026-02-19T10:14:00,Leo Kumar,leo.k@digest.today,This month's top reads,Quick note: Curated articles and insights for founders and builders — enjoy the monthly digest.,newsletter
+57,2026-02-16T23:08:00,Owen Joshi,owen.j@followup.team,Second attempt to connect,Quick note: Tried reaching earlier — looping back to see if you’re available this week.,followup
+100,2026-02-23T05:28:00,Anika Nair,anika.n@friends.chat,Event reminder,Reminder: the event starts at 6 PM tomorrow. See you there!,social
+55,2026-02-19T07:44:00,Daniel Saxena,daniel.s@contacts.reminder,Second attempt to connect,Tried reaching earlier — looping back to see if you’re available this week.,followup
+44,2026-02-21T10:54:00,Priya Singh,priya.s@seedfunds.co,Intro from partner - quick note,"Hi,
+
+Intro to one of our partners who might be interested in the next round. Would you like to connect?
+
+Best,
+Team Please share the updated cap table and 3 months of runway projections.",investor
+51,2026-02-22T02:53:00,Tara Rao,tara.r@elevate.ventures,Intro from partner,"Hi,
+
+Intro to one of our partners who might be interested in the next round. Would you like to connect?
+
+Best,
+Team Please share the updated cap table and 3 months of runway projections.",investor
+68,2026-02-17T16:08:00,Neil Shah,neil.s@billing.services,Invoice #2026-041 - quick note,Attached invoice for services rendered. Payment due in 15 days. Please confirm receipt.,invoice
+47,2026-02-21T20:46:00,Maya Bhandari,maya.b@venturelab.vc,Due diligence request,Please provide access to the data room and the cap table; we need this for due diligence. Please let me know what you think.,investor
+69,2026-02-18T04:38:00,Omar Nair,omar.n@itops.company,Action needed to resolve issue,Quick note: We need additional info from you to proceed. Please send logs and a short description.,support
+62,2026-02-16T03:24:00,Isha Saxena,isha.s@invoices.acme,Invoice #2026-041,"Hi,
+
+Attached invoice for services rendered. Payment due in 15 days. Please confirm receipt.
+
+Best,
+Team",invoice
+98,2026-02-22T02:02:00,Rahul Rao,rahul.r@community.group,Join our meetup,We’re hosting a local meetup. Would love for you to drop by. Please let me know what you think.,social
+80,2026-02-20T22:47:00,Rahul Chopra,rahul.c@compliance.team,Notice of policy change,"Hello,
+
+Legal notice: changes to terms. Review and acknowledge receipt.",legal
+42,2026-02-21T02:56:00,Kavya Singh,kavya.s@hiringhub.io,Hiring: Software Engineer,Hi — I found your profile and would love to talk about a backend role. Are you available for a 20-minute chat this week? Please let me know what you think.,recruiter
+59,2026-02-23T05:15:00,Kavya Khan,kavya.k@contacts.reminder,Reminder: feedback needed,Quick note: Friendly reminder to send feedback on the mockups. Your input is important.,followup
+49,2026-02-21T04:20:00,Daniel Mehta,daniel.m@seedfunds.co,Due diligence request - quick note,"Hi,
+
+Please provide access to the data room and the cap table; we need this for due diligence.
+
+Best,
+Team",investor
+99,2026-02-16T06:55:00,Maya Desai,maya.d@community.group,Congrats on the launch!,Huge congrats on the product launch. Let’s celebrate soon. Please let me know what you think.,social
+58,2026-02-22T02:28:00,Vikram Malhotra,vikram.m@assistant.tools,Second attempt to connect,"Hello,
+
+Tried reaching earlier — looping back to see if you’re available this week.",followup
+76,2026-02-21T19:01:00,Esha Saxena,esha.s@support.helpdesk,Service outage resolved,Quick note: The outage is resolved. We're monitoring systems. No further action required.,support
+33,2026-02-20T11:00:00,Lina Malhotra,lina.m@updates.company,Policy change notice,Quick note: We’ve updated our privacy policy. This is an informational notice to keep you in the loop.,informational
+95,2026-02-16T06:52:00,Kavya Saxena,kavya.s@friends.chat,Congrats on the launch!,Huge congrats on the product launch. Let’s celebrate soon.,social
+60,2026-02-21T02:05:00,Omar Bose,omar.b@followup.team,Following up on my previous email - quick note,Hi — just following up on the note I sent last week. Any updates? Please let me know what you think.,followup
+64,2026-02-22T13:39:00,Isha Kapoor,isha.k@payments.co,Receipt for payment,Thank you — this is your receipt for the recent payment. No action needed. Please let me know what you think.,invoice
+85,2026-02-22T00:04:00,Maya Mehta,maya.m@digest.today,This month's top reads,Curated articles and insights for founders and builders — enjoy the monthly digest. Please let me know what you think.,newsletter
+38,2026-02-17T05:27:00,Omar Patel,omar.p@talentfinder.co,Follow-up on application,"Hello,
+
+Quick follow-up on your application — can you share an updated resume by tomorrow?",recruiter
+30,2026-02-16T14:04:00,Ravi Iyer,ravi.i@updates.company,FYI: server maintenance,"Hello,
+
+A reminder that we have planned maintenance on Saturday; services may be briefly unavailable.",informational
+2,2026-02-16T15:14:00,Ravi Shah,ravi.s@meetings.io,Quick call this week - quick note,"Hello,
+
+I’ve reviewed the proposal and would love to discuss a few details. Are you available for a 30-minute Zoom sometime this week? Ideally before Thursday evening, since we’re finalizing on Friday.",scheduling
+53,2026-02-20T11:52:00,Arjun Rao,arjun.r@assistant.tools,Reminder: feedback needed,"Hi,
+
+Friendly reminder to send feedback on the mockups. Your input is important.
+
+Best,
+Team",followup
+22,2026-02-21T15:06:00,Kavya Kumar,kavya.k@newsletter.marketing,Promotion: upgrade and save - quick note,"Hello,
+
+Upgrade before end of month to lock in discounted pricing.",marketing
+3,2026-02-19T09:48:00,Kavya Malhotra,kavya.m@meetings.io,30-min sync?,"Hello,
+
+Can we lock a 30 min sync next Tue between 2-5 PM IST? I'm traveling Monday but free Tuesday afternoon.",scheduling
+24,2026-02-18T15:12:00,Vikram Singh,vikram.s@newsletter.marketing,Special offer just for you,Hi — limited time offer: upgrade now and get 30% off. Click here to redeem.,marketing
+88,2026-02-16T04:47:00,Tara Bhandari,tara.b@digest.today,Editor's pick - quick note,Quick note: We selected a few products and essays worth your attention this month.,newsletter
+92,2026-02-17T18:38:00,Arjun Patel,arjun.p@news.monthly,Community highlights,Members shared wins and resources — a quick roundup of the best conversations. Please let me know what you think.,newsletter
+75,2026-02-20T16:53:00,Tara Khan,tara.k@help.service,Steps to reproduce the bug,Quick note: Please follow these steps and let us know whether you can reproduce the issue.,support
+87,2026-02-21T23:58:00,Leo Joshi,leo.j@insights.media,Product tips,"Hello,
+
+5 tips to get more from the product — quick actionable ideas.",newsletter
+83,2026-02-19T10:03:00,Owen Verma,owen.v@legal.guard,Compliance request,We need confirmation of compliance with the new standard. Please provide the requested documents. Please let me know what you think.,legal
+21,2026-02-22T15:34:00,Kavya Khan,kavya.k@growthbuzz.co,Invite: webinar on growth - quick note,Join our webinar next Wednesday to learn user acquisition hacks. Register here.,marketing
+61,2026-02-16T22:26:00,Samir Reddy,samir.r@payments.co,Payment reminder,Quick note: This is a reminder — invoice still outstanding. Please settle by end of week. Payment due by the end of the month.,invoice
+72,2026-02-22T06:23:00,Ravi Nair,ravi.n@itops.company,Support follow-up - quick note,Checking whether the fix worked for you — any remaining problems?,support
+15,2026-02-16T04:20:00,Priya Chopra,priya.c@financecorp.com,Action required: contract deadline,"Hi,
+
+This is urgent — contract needs your signature within 24 hours or the slot will be given to another party.
+
+Best,
+Team This needs to be done within 24 hours.",urgent_deadline
+93,2026-02-20T07:25:00,Maya Malhotra,maya.m@community.group,Catch up?,It’s been a while — fancy a quick catch-up sometime? Please let me know what you think.,social
+52,2026-02-22T23:43:00,Vikram Malhotra,vikram.m@assistant.tools,Reminder: feedback needed,"Hello,
+
+Friendly reminder to send feedback on the mockups. Your input is important.",followup
