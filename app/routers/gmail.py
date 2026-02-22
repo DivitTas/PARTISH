@@ -5,7 +5,7 @@ from googleapiclient.errors import HttpError
 
 from app.routers.auth import get_google_credentials
 from src.gmail_access import get_gmail_service, get_email_details
-from src.JSON_Extracter import analyze_email_sentiment
+from src.JSON_Extracter import analyze_email_sentiment, EmailAnalysis # Import EmailAnalysis model
 from src.date_parser import parse_deadline_string
 from src.calendar_api import get_calendar_service, create_calendar_event # Import Calendar API functions
 
@@ -42,6 +42,45 @@ async def list_gmail_messages(credentials: Credentials = Depends(get_google_cred
         raise HTTPException(status_code=error.resp.status, detail=f"Gmail API error: {error.content.decode()}")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"An unexpected error occurred: {str(e)}")
+
+@router.get("/analyze_recent", response_model=List[EmailAnalysis])
+async def analyze_recent_emails(credentials: Credentials = Depends(get_google_credentials)):
+    """
+    Fetches recent Gmail messages, analyzes them for urgency and deadlines,
+    and returns the analysis results directly.
+    """
+    try:
+        gmail_service = get_gmail_service(credentials)
+
+        results = gmail_service.users().messages().list(userId='me', maxResults=5).execute()
+        messages = results.get('messages', [])
+
+        if not messages:
+            return []
+
+        analyzed_emails = []
+        for msg_obj in messages:
+            msg_id = msg_obj['id']
+            sender, subject, body = get_email_details(gmail_service, msg_id)
+            full_email_text = f"{subject} {body}"
+
+            analysis = analyze_email_sentiment(full_email_text)
+            analyzed_emails.append(analysis)
+            
+            # Print to server terminal for debugging/logging, even though it's returned to client
+            print(f"\n--- Analyzed Email: '{subject}' from '{sender}' ---")
+            print(f"  Sentiment: {analysis.sentiment} (Score: {analysis.sentiment_score:.2f})")
+            print(f"  Urgency (ML): {analysis.urgency_level} (Score: {analysis.ml_urgency_score})")
+            print(f"  Deadline: {analysis.deadline}")
+            print("-" * 30)
+
+        return analyzed_emails
+
+    except HttpError as error:
+        raise HTTPException(status_code=error.resp.status, detail=f"Gmail API error: {error.content.decode()}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"An unexpected error occurred: {str(e)}")
+
 
 # Background task function (to keep the API response fast)
 async def _process_email_background(
