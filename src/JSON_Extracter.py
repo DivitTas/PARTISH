@@ -144,7 +144,7 @@ def analyze_email_sentiment(email_body: str) -> EmailAnalysis:
 
     # Populate found_keywords based on categories
     if urgency_level == "Very Urgent":
-        found_keywords.extend(VERY_URGENT_TERMS)
+        found_keywords.extend(very_urgent_terms)
     elif urgency_level == "Urgent":
         found_keywords.extend(urgent_terms)
     elif urgency_level == "Newsletter/Promo":
