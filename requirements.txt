@@ -4,3 +4,6 @@ python-multipart
 python-jose
 itsdangerous
 SQLAlchemy
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
