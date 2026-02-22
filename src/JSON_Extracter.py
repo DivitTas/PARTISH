@@ -4,7 +4,7 @@ import pickle
 import os
 import numpy as np
 from pydantic import BaseModel, Field
-from typing import Optional, List
+from typing import Optional, List, Tuple
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 # Load the spaCy medium model
@@ -20,6 +20,10 @@ except OSError:
 _clf = None
 _vectorizer = None
 
+# New terms for stronger signals (must match trainer)
+STRONG_URGENT_TERMS_SIGNAL = ["urgent", "asap", "immediate", "critical", "deadline"]
+APPLICATION_TERMS = ["application", "applicant", "admissions", "apply", "form"]
+
 class EmailAnalysis(BaseModel):
     """
     Represents the sentiment analysis, keyword extraction, and NLP-based entity recognition from an email.
@@ -33,14 +37,13 @@ class EmailAnalysis(BaseModel):
     named_entities: List[str] = Field(default_factory=list) # New field for named entities
     dates: List[str] = Field(default_factory=list) # New field for dates
 
-def check_semantic_similarity(text: str, doc, target_words: List[str], threshold: float = 0.7) -> bool:
+def check_semantic_similarity(text_lower: str, doc, target_words: List[str], threshold: float = 0.7) -> bool:
     """
-    Checks if the given text has semantic similarity with any of the target words.
-    Requires a spaCy model with word vectors (e.g., en_core_web_md or lg).
-    Uses 'text' for fast regex check and 'doc' for semantic similarity.
+    Checks for semantic similarity or exact regex match.
+    Uses 'text_lower' for fast regex check and 'doc' for semantic similarity.
     """
     # Fast regex check first
-    if any(re.search(r'\b' + re.escape(word) + r'\b', text) for word in target_words):
+    if any(re.search(r'\b' + re.escape(word) + r'\b', text_lower) for word in target_words):
         return True
 
     # Semantic check
@@ -99,34 +102,60 @@ def analyze_email_sentiment(email_body: str) -> EmailAnalysis:
     urgency_level = "Regular"
 
     # Use spaCy for more advanced NLP
-    doc = nlp(email_body)
-    
+    doc = nlp(email_body) # This is the doc for the full email_body
+    email_lower = email_body.lower() # For regex checks
+
     named_entities = [ent.text for ent in doc.ents]
     dates = [ent.text for ent in doc.ents if ent.label_ == "DATE"]
 
-    # Improve urgency detection using spaCy entities, original keywords, and semantic similarity
-    email_lower = email_body.lower()
-
+    # --- Rule-based urgency calculation (for initial urgency_level & heuristic features) ---
+    
+    # 1. Has Explicit Deadline
+    has_date_entity = any(ent.label_ == "DATE" for ent in doc.ents)
+    has_deadline_keyword = bool(re.search(r'\b(deadline|due by|due on|submit by|before)\b', email_lower))
+    has_explicit_deadline = 1.0 if (has_date_entity and has_deadline_keyword) else 0.0
+    
+    # 2. Keywords Count (general intensity)
+    keyword_intensity = 0.0
     if check_semantic_similarity(email_lower, doc, very_urgent_terms):
+        keyword_intensity += 1.0
+    if check_semantic_similarity(email_lower, doc, urgent_terms):
+        keyword_intensity += 1.0
+    if check_semantic_similarity(email_lower, doc, promo_terms):
+        keyword_intensity += 1.0
+
+    # 3. Has Strong Urgent Word (specific)
+    has_strong_urgent_word = 0.0
+    if any(re.search(r'\b' + re.escape(word) + r'\b', email_lower) for word in STRONG_URGENT_TERMS_SIGNAL):
+        has_strong_urgent_word = 1.0
+
+    # 4. Has Application Word
+    has_application_word = 0.0
+    if any(re.search(r'\b' + re.escape(word) + r'\b', email_lower) for word in APPLICATION_TERMS):
+        has_application_word = 1.0
+
+    # Set rule-based urgency_level based on new features
+    if has_strong_urgent_word or (has_explicit_deadline and keyword_intensity >= 1.0):
         urgency_level = "Very Urgent"
-        found_keywords.extend(very_urgent_terms)
-    elif check_semantic_similarity(email_lower, doc, urgent_terms) or \
-         any(date for date in dates): # Any date mentioned increases urgency
+    elif keyword_intensity >= 1.0 or has_explicit_deadline:
         urgency_level = "Urgent"
+    elif has_application_word: 
+        urgency_level = "Urgent"
+
+    # Populate found_keywords based on categories
+    if urgency_level == "Very Urgent":
+        found_keywords.extend(VERY_URGENT_TERMS)
+    elif urgency_level == "Urgent":
         found_keywords.extend(urgent_terms)
-    elif check_semantic_similarity(email_lower, doc, promo_terms):
-        urgency_level = "Newsletter/Promo"
+    elif urgency_level == "Newsletter/Promo":
         found_keywords.extend(promo_terms)
-    
-    # Basic deadline extraction - can be improved with spaCy date entities
-    # Prioritize spaCy extracted dates for deadline if present and relevant
+
+    # Basic deadline extraction
     deadline = next((d for d in dates if any(keyword in d.lower() for keyword in ["tomorrow", "friday", "monday", "week", "day", "eod"])), None)
-    
     if not deadline:
         deadline_match = re.search(r'(?:deadline|due|by)\s+(.*?)(?:\.|\n|$)', email_body, re.IGNORECASE)
         if deadline_match:
             deadline_phrase = deadline_match.group(1).strip()
-            # Try to parse the deadline phrase with spaCy for better accuracy
             deadline_doc = nlp(deadline_phrase)
             date_ents = [ent.text for ent in deadline_doc.ents if ent.label_ == "DATE"]
             deadline = date_ents[0] if date_ents else deadline_phrase
@@ -135,40 +164,26 @@ def analyze_email_sentiment(email_body: str) -> EmailAnalysis:
     ml_urgency_score = None
     if _clf and _vectorizer:
         try:
-            # 1. TF-IDF Features (Subject + Body) - Here we only have body, but training used subject+body.
-            # Ideally we'd need subject too. For now, we'll use body as proxy or modify signature.
-            # Assuming just body for now as signature is `email_body: str`.
-            # Note: This is a discrepancy. If training used Subject+Body, inference must too.
-            # However, signature of this function only takes `email_body`.
-            # We will use `email_body` for TF-IDF to avoid breaking signature, 
-            # acknowledging slight performance hit.
-            
+            # TF-IDF Features (Subject + Body) - Assuming email_body represents full text here
             X_text = _vectorizer.transform([email_body]).toarray()
             
-            # 2. Manual Features
-            # Must match order in DecisionTree_Trainer.py: 
-            # [sentiment_score, has_deadline, keyword_intensity, num_entities]
-            
-            # Calculate keyword intensity (simple boolean sum based on earlier checks)
-            keyword_intensity = 0.0
-            if check_semantic_similarity(email_lower, doc, very_urgent_terms): keyword_intensity += 1.0
-            if check_semantic_similarity(email_lower, doc, urgent_terms): keyword_intensity += 1.0
-            if check_semantic_similarity(email_lower, doc, promo_terms): keyword_intensity += 1.0
-            
+            # Heuristic features (must match trainer's order and count: 6 features)
             h_features = np.array([[
                 sentiment_scores['compound'],
-                1.0 if deadline else 0.0,
+                has_explicit_deadline,
                 keyword_intensity,
-                float(len(named_entities))
+                float(len(named_entities)),
+                has_strong_urgent_word,
+                has_application_word
             ]])
             
-            # Combine
+            # Combine TF-IDF (94) + Heuristic (6) = 100 features
             X = np.hstack([X_text, h_features])
             
             # Predict
             ml_urgency_score = int(_clf.predict(X)[0])
             
-            # Map ML score to urgency level strings
+            # Override or combine with heuristic urgency
             ml_urgency_map = {0: "Regular", 1: "Urgent", 2: "Very Urgent"}
             urgency_level = ml_urgency_map.get(ml_urgency_score, urgency_level)
             

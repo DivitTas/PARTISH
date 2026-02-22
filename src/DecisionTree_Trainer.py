@@ -18,7 +18,7 @@ MODEL_PATH = os.path.join(MODEL_DIR, 'urgency_model.pkl')
 VECTORIZER_PATH = os.path.join(MODEL_DIR, 'vectorizer.pkl')
 
 # Feature Extraction Settings
-TFIDF_MAX_FEATURES = 96  # 100 total - 4 manual features
+TFIDF_MAX_FEATURES = 94  # 100 total - 6 manual features
 
 # Intent to Urgency Mapping
 INTENT_URGENCY_MAP = {
@@ -31,6 +31,10 @@ INTENT_URGENCY_MAP = {
 VERY_URGENT_TERMS = ["critical", "immediate", "asap", "urgent", "now", "crucial"]
 URGENT_TERMS = ["important", "deadline", "soon", "tomorrow", "end of day", "eod", "priority"]
 PROMO_TERMS = ["newsletter", "promo", "discount", "offer", "sale", "free"]
+
+# New terms for stronger signals
+STRONG_URGENT_TERMS_SIGNAL = ["urgent", "asap", "immediate", "critical", "deadline"]
+APPLICATION_TERMS = ["application", "applicant", "admissions", "apply", "form"]
 
 # Initialize NLP tools globally for the script
 try:
@@ -69,38 +73,61 @@ def check_semantic_similarity(text_lower: str, doc, target_words: List[str], thr
 
 def extract_manual_features(body: str, subject: str) -> List[float]:
     """
-    Extracts the 4 heuristic features:
+    Extracts the 6 heuristic features:
     1. Sentiment Score
-    2. Has Deadline (0 or 1)
-    3. Number of Keywords (heuristic count)
+    2. Has Explicit Deadline (0 or 1)
+    3. Keyword Intensity (heuristic count)
     4. Number of Named Entities
+    5. Has Strong Urgent Word (0 or 1)
+    6. Has Application Word (0 or 1)
     """
-    doc = nlp(body)
+    doc_body = nlp(body)
+    doc_full = nlp(subject + " " + body) # Use for more comprehensive checks
     body_lower = body.lower()
+    subject_lower = subject.lower()
+    full_lower = subject_lower + " " + body_lower
     
     # 1. Sentiment
     sentiment_score = analyzer.polarity_scores(body)['compound']
     
-    # 2. Deadline
-    # Check for DATE entities or regex patterns
-    has_date_entity = any(ent.label_ == "DATE" for ent in doc.ents)
-    has_deadline_regex = bool(re.search(r'(?:deadline|due|by)\s+', body_lower))
-    has_deadline = 1.0 if (has_date_entity or has_deadline_regex) else 0.0
+    # 2. Has Explicit Deadline (more specific than before)
+    # Check for DATE entities and presence of "deadline" or "due by" keywords
+    has_date_entity = any(ent.label_ == "DATE" for ent in doc_body.ents)
+    has_deadline_keyword = bool(re.search(r'\b(deadline|due by|due on|submit by|before)\b', full_lower))
+    has_explicit_deadline = 1.0 if (has_date_entity or has_deadline_keyword) else 0.0
     
-    # 3. Keywords Count
-    # We check each category. If match found, increment 'intensity' counter.
+    # 3. Keywords Count (still keep for general intensity)
     keyword_intensity = 0.0
-    if check_semantic_similarity(body_lower, doc, VERY_URGENT_TERMS):
+    if check_semantic_similarity(full_lower, doc_full, VERY_URGENT_TERMS):
         keyword_intensity += 1.0
-    if check_semantic_similarity(body_lower, doc, URGENT_TERMS):
+    if check_semantic_similarity(full_lower, doc_full, URGENT_TERMS):
         keyword_intensity += 1.0
-    if check_semantic_similarity(body_lower, doc, PROMO_TERMS):
+    if check_semantic_similarity(full_lower, doc_full, PROMO_TERMS):
         keyword_intensity += 1.0
         
     # 4. Num Entities
-    num_entities = float(len(doc.ents))
+    num_entities = float(len(doc_full.ents))
+
+    # 5. Has Strong Urgent Word (specific and potentially in subject)
+    has_strong_urgent_word = 0.0
+    if any(re.search(r'\b' + re.escape(word) + r'\b', subject_lower) for word in STRONG_URGENT_TERMS_SIGNAL):
+        has_strong_urgent_word = 1.0
+    elif any(re.search(r'\b' + re.escape(word) + r'\b', body_lower) for word in STRONG_URGENT_TERMS_SIGNAL):
+        has_strong_urgent_word = 1.0
+
+    # 6. Has Application Word
+    has_application_word = 0.0
+    if any(re.search(r'\b' + re.escape(word) + r'\b', full_lower) for word in APPLICATION_TERMS):
+        has_application_word = 1.0
     
-    return [sentiment_score, has_deadline, keyword_intensity, num_entities]
+    return [
+        sentiment_score,
+        has_explicit_deadline,
+        keyword_intensity,
+        num_entities,
+        has_strong_urgent_word,
+        has_application_word
+    ]
 
 def train_decision_tree():
     csv_path = 'dataset/synthetic_emails_500.csv'
